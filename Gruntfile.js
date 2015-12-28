@@ -9,7 +9,6 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/style.css': 'scss/style.scss',
-          'css/wysiwyg.css': 'scss/wysiwyg.scss',
           'css/print.css': 'scss/print.scss'
         }
       }
@@ -19,8 +18,7 @@ module.exports = function(grunt) {
         files: {
           'scss/_base.scss': 'scss/base/**/*.scss',
           'scss/_component.scss': 'scss/component/**/*.scss',
-          'scss/_layout.scss': 'scss/layout/**/*.scss',
-          'scss/_pages.scss': 'scss/pages/**/*.scss'
+          'scss/_layout.scss': 'scss/layout/**/*.scss'
         }
       },
       options: {

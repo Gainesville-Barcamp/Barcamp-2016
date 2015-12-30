@@ -51,15 +51,11 @@ module.exports = function(grunt) {
       server: {
         options: {
           hostname: 'localhost',
-          port: 9001,
-          livereload: true
-          // base: 'www-root'
+          port: 9000,
+          livereload: true,
+          open: true,
+          debug: true
         }
-      }
-    },
-    open : {
-      dev : {
-        path: 'http://localhost:9001'
       }
     }
   });
@@ -69,8 +65,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-open');
 
-  grunt.registerTask('default', ['serve']);
-  grunt.registerTask('serve', ['connect', 'open:dev', 'watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('serve', ['connect', 'watch']);
 };

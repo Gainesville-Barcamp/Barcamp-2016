@@ -2,7 +2,8 @@
 ## To install
 1. Clone the repository
 2. Run `npm install`
-3. Start editing shit.
+3. Run `grunt serve`. Your browser will open.
+4. Start editing shit.
 
 ## How to contribute
 1. Create a feature branch

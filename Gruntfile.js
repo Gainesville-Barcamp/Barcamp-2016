@@ -30,8 +30,9 @@ module.exports = function(grunt) {
         files: ['scss/**/*.scss'],
         tasks: ['sass_globbing', 'sass', 'autoprefixer'],
         options: {
-          livereload: true,
-          spawn: false
+          spawn: false,
+          reload: true,
+          livereload: true
         }
       }
     },
@@ -46,12 +47,30 @@ module.exports = function(grunt) {
         dest: 'css/style.css'
       },
     },
+    connect: {
+      server: {
+        options: {
+          hostname: 'localhost',
+          port: 9001,
+          livereload: true
+          // base: 'www-root'
+        }
+      }
+    },
+    open : {
+      dev : {
+        path: 'http://localhost:9001'
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-sass-globbing');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-open');
 
-  grunt.registerTask('default', ['sass_globbing', 'sass', 'autoprefixer']);
+  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('serve', ['connect', 'open:dev', 'watch']);
 };

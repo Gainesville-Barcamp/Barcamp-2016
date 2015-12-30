@@ -2,24 +2,24 @@
  * Header
  */
 
-$header-height: 75px;
+$header-height: 100px;
 
 .year {
   position: relative;
   float: left;
   width: 25%;
-  max-width: 300px;
+  max-width: 200px;
   text-align: center;
   margin: 0;
   padding: 0;
-  line-height: $header-height;
+  line-height: $header-height*0.75;
   background: $red;
   font-family: $font-sans;
   font-style: italic;
   font-size: 24px;
   color: white;
-  @include breakpoint($tablet_narrow) {
-    $header-height: 100px;
+  @include breakpoint($smartphone_wide) {
+    line-height: $header-height;
   }
   &:after {
     content: "";
@@ -29,29 +29,43 @@ $header-height: 75px;
     display: block;
     height: 0;
     width: 0;
-    border-bottom: $header-height solid transparent;
-    border-left: $header-height*0.4 solid $red;
+    border-bottom: $header-height*0.75 solid transparent;
+    border-left: ($header-height*0.75)*0.4 solid $red;
+    @include breakpoint($smartphone_wide) {
+      border-bottom: $header-height solid transparent;
+      border-left: $header-height*0.4 solid $red;
+    }
   }
 }
-.menu {
+.nav {
   float: right;
+  max-width: 75%;
+}
+.menu {
   display: flex;
   margin: 0;
   padding: 0;
-  max-width: 70%;
-  margin-right: 5%;
 }
 .menu-item {
+  float: left;
   list-style: none;
   text-align: center;
   padding: 0;
   margin: 0;
 }
 .menu-item-link {
-  line-height: $header-height;
+  line-height: $header-height*0.75;
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 7px;
   color: $gray;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
+  @include breakpoint($smartphone_wide) {
+    line-height: $header-height;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  @include breakpoint($tablet_narrow) {
+    padding: 0 25px;
+  }
 }

@@ -497,7 +497,7 @@ blockquote {
   position: relative;
   float: left;
   width: 25%;
-  max-width: 300px;
+  max-width: 200px;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -507,6 +507,9 @@ blockquote {
   font-style: italic;
   font-size: 24px;
   color: white; }
+  @media (min-width: 480px) {
+    .year {
+      line-height: 100px; } }
   .year:after {
     content: "";
     position: absolute;
@@ -517,18 +520,24 @@ blockquote {
     width: 0;
     border-bottom: 75px solid transparent;
     border-left: 30px solid #F62D4F; }
+    @media (min-width: 480px) {
+      .year:after {
+        border-bottom: 100px solid transparent;
+        border-left: 40px solid #F62D4F; } }
+
+.nav {
+  float: right;
+  max-width: 75%; }
 
 .menu {
-  float: right;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0;
-  max-width: 70%;
-  margin-right: 5%; }
+  padding: 0; }
 
 .menu-item {
+  float: left;
   list-style: none;
   text-align: center;
   padding: 0;
@@ -537,10 +546,18 @@ blockquote {
 .menu-item-link {
   line-height: 75px;
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 7px;
   color: #353A47;
   text-transform: uppercase;
-  font-size: 16px; }
+  font-size: 14px; }
+  @media (min-width: 480px) {
+    .menu-item-link {
+      line-height: 100px;
+      font-size: 16px;
+      padding: 0 10px; } }
+  @media (min-width: 650px) {
+    .menu-item-link {
+      padding: 0 25px; } }
 
 /**
  * Hero
@@ -550,7 +567,7 @@ blockquote {
   background: black;
   background-size: contain;
   background-image: url(/images/background-small.jpg);
-  height: calc(100vh - 75px); }
+  height: calc(100vh - 100px); }
   @media (min-width: 650px) {
     .hero {
       background-image: url(/images/background-medium.jpg); } }

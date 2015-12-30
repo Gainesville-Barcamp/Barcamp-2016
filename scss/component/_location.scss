@@ -1,0 +1,51 @@
+/**
+ * Location section
+ */
+
+.location {
+  padding: 50px 0; // @todo abstract margins
+}
+.location-banner {
+  float: left;
+}
+.location-address {
+  float: left;
+  clear: left;
+}
+.location-button {
+  float: right;
+}
+.map {
+  clear: both;
+  height: 0;
+  padding-top: 40%;
+  position: relative;
+  top: -30px;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-top: 100px solid white;
+    z-index: 10;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-bottom: 100px solid white;
+    z-index: 10;
+  }
+  iframe {
+    position: absolute;
+    @include center;
+  }
+}

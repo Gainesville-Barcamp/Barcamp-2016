@@ -9,15 +9,17 @@
 <body>
   <header class="header">
     <h1 class="year">2016</h1>
-    <ul class="menu">
-      <li class="menu-item"><a href="#" class="menu-item-link">About</a></li>
-      <li class="menu-item"><a href="#" class="menu-item-link">Location</a></li>
-      <li class="menu-item"><a href="#" class="menu-item-link">Sessions</a></li>
-    </ul>
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu-item"><a href="#" class="menu-item-link">About</a></li>
+        <li class="menu-item"><a href="#" class="menu-item-link">Location</a></li>
+        <li class="menu-item"><a href="#" class="menu-item-link">Sessions</a></li>
+      </ul>
+    </nav>
   </header>
   <section class="hero">
     <img src="images/logo.svg" alt="2016 Logo" class="hero-logo">
-    <a href="#" class="button">Register</a>
+    <a href="#" class="button hero-button">Register</a>
   </section>
   <section class="about">
     <div class="copy">
@@ -42,13 +44,14 @@
       </p>
     </div>
   </section>
-  <section class="location">
-    <h1 class="banner">Location</h1>
-    <p><strong>Stuzin Hall</strong><br>
-      1454 Union Rd. <br>
-      Gainesville, FL 32611</p>
-      <a href="#" class="button">View Parging Map</a>
-      <div class="map">Put the damned map here.</div>
+  <section class="location container">
+    <h1 class="banner location-banner">Location</h1>
+    <h2 class="location-address">Stuzin Hall<br>
+      1454 Union Rd. Gainesville, FL 32611</h2>
+      <a href="#" class="button location-button">View Parging Map</a>
+      <div class="map container-break">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zdflmJ9AT5ko.kmSdwAIPwFjQ" width="100%" height="800"></iframe>
+      </div>
   </section>
   <section class="sessions">
     <h1 class="banner">Sessions</h1>

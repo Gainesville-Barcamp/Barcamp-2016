@@ -30,7 +30,7 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-top: 100px solid white;
+    border-top: 100px solid $off-white;
     z-index: 10;
   }
   &:after {
@@ -41,7 +41,7 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid $off-white;
     z-index: 10;
   }
   iframe {

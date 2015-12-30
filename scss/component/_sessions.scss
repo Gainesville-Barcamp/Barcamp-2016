@@ -1,0 +1,21 @@
+/**
+ * Sessions section
+ */
+
+.sessions {
+  .copy {
+    clear: left;
+    @include breakpoint($tablet_wide) {
+      max-width: 60%;
+      float: left;
+    }
+  }
+}
+.sessions-banner {
+  float: left;
+}
+.sessions-button {
+  @include breakpoint($tablet_wide) {
+    float: right;
+  }
+}

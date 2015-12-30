@@ -3,6 +3,7 @@
  */
 
 h1 {
+  font-family: $font-serif;
   font-size: 45px;
   line-height: 1.1;
   &.large {
@@ -14,6 +15,7 @@ h1 {
   }
 }
 h2 {
+  font-family: $font-serif;
   font-size: 40px;
   line-height: 1.2;
   a {
@@ -50,4 +52,37 @@ blockquote {
     font-size: 70px;
     line-height: 1.1;
   }
+}
+%banner,
+.banner {
+  font-family: $font-sans;
+  position: relative;
+  margin: 0;
+  padding: 0 10px;
+  display: inline-block;
+  background: $gray;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: white;
+  &:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-bottom: 24px solid transparent;
+    border-left: 24px*0.4 solid $gray;
+  }
+}
+%button,
+.button {
+  display: inline-block;
+  background: $red;
+  line-height:  50px;
+  color: white;
+  font-size: 24px;
+  padding: 0 25px;
+  text-transform: uppercase;
 }

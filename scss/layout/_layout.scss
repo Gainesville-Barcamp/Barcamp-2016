@@ -14,8 +14,8 @@ $container-max: 1700px;
   margin-left: ($container-width/2)*-1;
   margin-right: ($container-width/2)*-1;
   @include breakpoint($container-max) {
-    margin-left: calc(-1 * 50vw - #{$container-max/2});
-    margin-right: calc(-1 * 50vw - #{$container-max/2});
+    margin-left: calc(-1 * 50vw + #{$container-max/2});
+    margin-right: calc(-1 * 50vw + #{$container-max/2});
   }
 }
 .container-break-padding {
@@ -24,9 +24,9 @@ $container-max: 1700px;
   padding-left: ($container-width/2)*-1;
   padding-right: ($container-width/2)*-1;
   @include breakpoint($container-max) {
-    margin-left: calc(-1 * 50vw - #{$container-max/2});
-    margin-right: calc(-1 * 50vw - #{$container-max/2});
-    padding-left: calc(-1 * 50vw - #{$container-max/2});
-    padding-right: calc(-1 * 50vw - #{$container-max/2});
+    margin-left: calc(-1 * 50vw + #{$container-max/2});
+    margin-right: calc(-1 * 50vw + #{$container-max/2});
+    padding-left: calc(-1 * 50vw + #{$container-max/2});
+    padding-right: calc(-1 * 50vw + #{$container-max/2});
   }
 }

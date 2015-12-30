@@ -6,22 +6,37 @@
   padding: 50px 0; // @todo abstract margins
 }
 .location-banner {
-  float: left;
+  @include breakpoint($tablet_narrow) {
+    float: left;
+  }
 }
 .location-address {
-  float: left;
-  clear: left;
+  @include breakpoint($tablet_narrow) {
+    float: left;
+    clear: left;
+    max-width: 60%;
+  }
 }
 .location-button {
-  float: right;
+  position: relative;
+  z-index: 20;
+  @include breakpoint($tablet_narrow) {
+    float: right;
+  }
 }
 .map {
   clear: both;
   height: 0;
-  padding-top: 40%;
+  padding-top: 500px;
   position: relative;
   top: -30px;
   overflow: hidden;
+  @include breakpoint($tablet_wide) {
+    padding-top: 50%;;
+  }
+  @include breakpoint($wide) {
+    padding-top: 40%;;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -30,8 +45,14 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-top: 100px solid white;
+    border-top: 25px solid white;
     z-index: 10;
+    @include breakpoint($tablet_narrow) {
+      border-top: 50px solid white;
+    }
+    @include breakpoint($wide) {
+      border-top: 100px solid white;
+    }
   }
   &:after {
     content: "";
@@ -41,8 +62,14 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-bottom: 100px solid white;
+    border-bottom: 25px solid white;
     z-index: 10;
+    @include breakpoint($tablet_narrow) {
+      border-bottom: 50px solid white;
+    }
+    @include breakpoint($wide) {
+      border-bottom: 100px solid white;
+    }
   }
   iframe {
     position: absolute;

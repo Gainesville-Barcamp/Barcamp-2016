@@ -565,16 +565,14 @@ blockquote {
  * About
  */
 .about {
+  margin: 100px auto 50px auto;
   position: relative;
-  margin: 0 auto;
   padding: 0;
-  width: 100%;
-  max-width: 1200px;
   background-image: url(/images/about-bg.jpg);
   background-repeat: no-repeat;
   background-position: 100% 0;
   z-index: -1;
-  background-size: auto; }
+  background-size: contain; }
   .about .copy {
     position: relative;
     padding: 40px 0 20px 40px;
@@ -582,10 +580,15 @@ blockquote {
     height: 100%;
     color: #fff;
     background: #F62D4F; }
+    @media (min-width: 1600px) {
+      .about .copy {
+        padding: 75px 0 100px 100px;
+        font-size: 22px; } }
     .about .copy h1 {
-      margin-top: 0; }
+      margin-top: 0;
+      font-size: 60px; }
     .about .copy p {
-      font-size: 18px; }
+      font-size: inherit; }
     .about .copy:after {
       content: '';
       position: absolute;
@@ -753,23 +756,36 @@ blockquote {
 .location {
   padding: 50px 0; }
 
-.location-banner {
-  float: left; }
+@media (min-width: 650px) {
+  .location-banner {
+    float: left; } }
 
-.location-address {
-  float: left;
-  clear: left; }
+@media (min-width: 650px) {
+  .location-address {
+    float: left;
+    clear: left;
+    max-width: 60%; } }
 
 .location-button {
-  float: right; }
+  position: relative;
+  z-index: 20; }
+  @media (min-width: 650px) {
+    .location-button {
+      float: right; } }
 
 .map {
   clear: both;
   height: 0;
-  padding-top: 40%;
+  padding-top: 500px;
   position: relative;
   top: -30px;
   overflow: hidden; }
+  @media (min-width: 900px) {
+    .map {
+      padding-top: 50%; } }
+  @media (min-width: 1600px) {
+    .map {
+      padding-top: 40%; } }
   .map:before {
     content: "";
     position: absolute;
@@ -778,8 +794,14 @@ blockquote {
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-top: 100px solid white;
+    border-top: 25px solid white;
     z-index: 10; }
+    @media (min-width: 650px) {
+      .map:before {
+        border-top: 50px solid white; } }
+    @media (min-width: 1600px) {
+      .map:before {
+        border-top: 100px solid white; } }
   .map:after {
     content: "";
     position: absolute;
@@ -788,8 +810,14 @@ blockquote {
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-bottom: 100px solid white;
+    border-bottom: 25px solid white;
     z-index: 10; }
+    @media (min-width: 650px) {
+      .map:after {
+        border-bottom: 50px solid white; } }
+    @media (min-width: 1600px) {
+      .map:after {
+        border-bottom: 100px solid white; } }
   .map iframe {
     position: absolute;
     left: 50%;

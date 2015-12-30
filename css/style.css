@@ -502,7 +502,7 @@ blockquote {
 .banner {
   font-family: futura;
   position: relative;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0 10px;
   display: inline-block;
   background: #353A47;
@@ -510,6 +510,15 @@ blockquote {
   line-height: 24px;
   text-transform: uppercase;
   color: white; }
+  @media (min-width: 650px) {
+    
+    .banner {
+      margin-bottom: 10px; } }
+  @media (min-width: 1600px) {
+    
+    .banner {
+      font-size: 22px;
+      line-height: 32px; } }
   
   .banner:after {
     content: "";
@@ -520,6 +529,11 @@ blockquote {
     left: 100%;
     border-bottom: 24px solid transparent;
     border-left: 9.6px solid #353A47; }
+    @media (min-width: 1600px) {
+      
+      .banner:after {
+        border-bottom: 32px solid transparent;
+        border-left: 12.8px solid #353A47; } }
 
 
 .button {
@@ -528,8 +542,19 @@ blockquote {
   line-height: 50px;
   color: white;
   font-size: 24px;
+  margin: 25px 0;
   padding: 0 25px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: background .2s; }
+  
+  .button:hover {
+    background: #f74563; }
+  @media (min-width: 1600px) {
+    
+    .button {
+      font-size: 35px;
+      line-height: 75px;
+      padding: 0 50px; } }
 
 /* generated with grunt-sass-globbing */
 /**
@@ -604,6 +629,12 @@ blockquote {
               transform-origin: 100%;
       z-index: -1;
       background: #F62D4F; }
+
+/**
+ * Footer
+ */
+footer {
+  min-height: 500px; }
 
 /**
  * Header
@@ -723,32 +754,25 @@ blockquote {
 
 .hero-button {
   position: absolute;
-  display: inline-block;
+  margin: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 10%;
-  font-size: 25px;
   background: #F62D4F;
-  color: white;
-  text-transform: uppercase;
   line-height: 75px;
   padding: 0 50px;
-  letter-spacing: 0.2em;
-  transition: background .2s; }
+  letter-spacing: 0.2em; }
   @media (min-width: 650px) {
     .hero-button {
       bottom: auto;
       top: calc(100% - 37px); } }
   @media (min-width: 1600px) {
     .hero-button {
-      font-size: 35px;
       line-height: 100px;
       padding: 0 75px;
       top: calc(100% - 50px); } }
-  .hero-button:hover {
-    background: #f74563; }
 
 /**
  * Location section
@@ -830,17 +854,27 @@ blockquote {
  * Sessions section
  */
 .sessions .copy {
+  font-size: 32px;
+  font-family: "pt_serifregular";
   clear: left; }
   @media (min-width: 900px) {
     .sessions .copy {
       max-width: 60%;
       float: left; } }
+  .sessions .copy p {
+    font-family: inherit;
+    font-size: inherit; }
 
 .sessions-banner {
   float: left; }
 
 @media (min-width: 900px) {
   .sessions-button {
-    float: right; } }
+    float: right;
+    margin-top: 100px; } }
+
+.sessions-image {
+  width: 100vw;
+  max-width: none; }
 
 /* generated with grunt-sass-globbing */

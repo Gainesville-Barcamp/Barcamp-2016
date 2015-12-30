@@ -69,7 +69,7 @@ blockquote {
 .banner {
   font-family: $font-sans;
   position: relative;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0 10px;
   display: inline-block;
   background: $gray;
@@ -77,6 +77,13 @@ blockquote {
   line-height: 24px;
   text-transform: uppercase;
   color: white;
+  @include breakpoint($tablet_narrow) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint($wide) {
+    font-size: 22px;
+    line-height: 32px;
+  }
   &:after {
     content: "";
     height: 0;
@@ -86,6 +93,10 @@ blockquote {
     left: 100%;
     border-bottom: 24px solid transparent;
     border-left: 24px*0.4 solid $gray;
+    @include breakpoint($wide) {
+      border-bottom: 32px solid transparent;
+      border-left: 32px*0.4 solid $gray;
+    }
   }
 }
 %button,
@@ -95,6 +106,16 @@ blockquote {
   line-height:  50px;
   color: white;
   font-size: 24px;
+  margin: 25px 0;
   padding: 0 25px;
   text-transform: uppercase;
+  transition: background .2s;
+  &:hover {
+    background: lighten($red, 5%);
+  }
+  @include breakpoint($wide) {
+    font-size: 35px;
+    line-height: 75px;
+    padding: 0 50px;
+  }
 }

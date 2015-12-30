@@ -4,10 +4,16 @@
 
 .sessions {
   .copy {
+    font-size: 32px; // @todo abstract
+    font-family: $font-serif;
     clear: left;
     @include breakpoint($tablet_wide) {
       max-width: 60%;
       float: left;
+    }
+    p {
+      font-family: inherit;
+      font-size: inherit;
     }
   }
 }
@@ -17,5 +23,10 @@
 .sessions-button {
   @include breakpoint($tablet_wide) {
     float: right;
+    margin-top: 100px; // arbitrary number
   }
+}
+.sessions-image {
+  width: 100vw;
+  max-width: none;
 }

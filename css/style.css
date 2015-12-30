@@ -369,6 +369,7 @@ th {
 body {
   margin: 0;
   line-height: 1.4;
+  color: #353A47;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -443,6 +444,7 @@ input[type="submit"] {
  * Typography
  */
 h1 {
+  font-family: "pt_serifregular";
   font-size: 45px;
   line-height: 1.1; }
   h1.large {
@@ -452,6 +454,7 @@ h1 {
     transition: color .2s; }
 
 h2 {
+  font-family: "pt_serifregular";
   font-size: 40px;
   line-height: 1.2; }
   h2 a {
@@ -485,10 +488,68 @@ blockquote {
     font-size: 70px;
     line-height: 1.1; }
 
+
+.banner {
+  font-family: futura;
+  position: relative;
+  margin: 0;
+  padding: 0 10px;
+  display: inline-block;
+  background: #353A47;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: white; }
+  
+  .banner:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-bottom: 24px solid transparent;
+    border-left: 9.6px solid #353A47; }
+
+
+.button {
+  display: inline-block;
+  background: #F62D4F;
+  line-height: 50px;
+  color: white;
+  font-size: 24px;
+  padding: 0 25px;
+  text-transform: uppercase; }
+
 /* generated with grunt-sass-globbing */
 /**
  * Base layouts
  */
+.container {
+  width: 94%;
+  max-width: 1700px;
+  margin: 0 auto; }
+
+.container-break {
+  margin-left: -47%;
+  margin-right: -47%; }
+  @media (min-width: 1700px) {
+    .container-break {
+      margin-left: calc(-1 * 50vw + 850px);
+      margin-right: calc(-1 * 50vw + 850px); } }
+
+.container-break-padding {
+  margin-left: -47%;
+  margin-right: -47%;
+  padding-left: -47%;
+  padding-right: -47%; }
+  @media (min-width: 1700px) {
+    .container-break-padding {
+      margin-left: calc(-1 * 50vw + 850px);
+      margin-right: calc(-1 * 50vw + 850px);
+      padding-left: calc(-1 * 50vw + 850px);
+      padding-right: calc(-1 * 50vw + 850px); } }
+
 /* generated with grunt-sass-globbing */
 /**
  * Header
@@ -575,5 +636,56 @@ blockquote {
     .hero {
       background-image: url(/images/background-full.jpg);
       height: 1000px; } }
+
+/**
+ * Location section
+ */
+.location {
+  padding: 50px 0; }
+
+.location-banner {
+  float: left; }
+
+.location-address {
+  float: left;
+  clear: left; }
+
+.location-button {
+  float: right; }
+
+.map {
+  clear: both;
+  height: 0;
+  padding-top: 40%;
+  position: relative;
+  top: -30px;
+  overflow: hidden; }
+  .map:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-top: 100px solid white;
+    z-index: 10; }
+  .map:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-bottom: 100px solid white;
+    z-index: 10; }
+  .map iframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 /* generated with grunt-sass-globbing */

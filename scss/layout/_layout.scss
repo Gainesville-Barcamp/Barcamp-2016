@@ -11,18 +11,18 @@ $container-max: 1700px;
   margin: 0 auto;
 }
 .container-break {
-  margin-left: ($container-width/2)*-1;
-  margin-right: ($container-width/2)*-1;
+  margin-left: (100-$container-width)/-2;
+  margin-right: (100-$container-width)/-2;
   @include breakpoint($container-max) {
     margin-left: calc(-1 * 50vw + #{$container-max/2});
     margin-right: calc(-1 * 50vw + #{$container-max/2});
   }
 }
 .container-break-padding {
-  margin-left: ($container-width/2)*-1;
-  margin-right: ($container-width/2)*-1;
-  padding-left: ($container-width/2)*-1;
-  padding-right: ($container-width/2)*-1;
+  margin-left: (100-$container-width)/-2;
+  margin-right: (100-$container-width)/-2;
+  padding-left: (100-$container-width)/-2;
+  padding-right: (100-$container-width)/-2;
   @include breakpoint($container-max) {
     margin-left: calc(-1 * 50vw + #{$container-max/2});
     margin-right: calc(-1 * 50vw + #{$container-max/2});

@@ -531,18 +531,18 @@ blockquote {
   margin: 0 auto; }
 
 .container-break {
-  margin-left: -47%;
-  margin-right: -47%; }
+  margin-left: -3%;
+  margin-right: -3%; }
   @media (min-width: 1700px) {
     .container-break {
       margin-left: calc(-1 * 50vw + 850px);
       margin-right: calc(-1 * 50vw + 850px); } }
 
 .container-break-padding {
-  margin-left: -47%;
-  margin-right: -47%;
-  padding-left: -47%;
-  padding-right: -47%; }
+  margin-left: -3%;
+  margin-right: -3%;
+  padding-left: -3%;
+  padding-right: -3%; }
   @media (min-width: 1700px) {
     .container-break-padding {
       margin-left: calc(-1 * 50vw + 850px);

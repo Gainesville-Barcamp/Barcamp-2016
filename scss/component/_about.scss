@@ -14,9 +14,8 @@
   background-size: contain;
 
   .copy {
-    position: relative;
-    padding: 40px 0 20px 40px;
-    width: calc(52% - 70px);
+    padding: 40px;
+    width: 100%;
     height: 100%;
     color: #fff;
     background: $red;
@@ -36,16 +35,42 @@
     &:after {
       content: '';
       position: absolute;
-      right: -70px;
-      top: 0;
-      height: 100%;
-      width: 50%;
-      transform: skewX(-5.5deg);
-      transform-origin: 100%;
-      z-index: -1;
-      background: $red;
+      left: 0;
+      bottom: -50px;
+      height: 50px;
+      margin-bottom: 50px;
+      width: 100%;
+      border-right: 100vw solid $off-white;
+      border-top: 50px solid $red;
     }
 
+  }
+
+  @include breakpoint($normal) {
+    background-size: contain;
+  }
+
+  @include breakpoint($tablet_wide) {
+
+    .copy {
+      position: relative;
+      padding: 40px 10px 10px 40px;
+      width: calc(52% - 70px);
+
+      &:after {
+        border: 0;
+        left: auto;
+        top: 0;
+        right: -70px;
+        height: 100%;
+        width: 50%;
+        transform: skewX(-5.5deg);
+        transform-origin: 100%;
+        z-index: -1;
+        background: $red;
+      }
+
+    }
   }
 
 }

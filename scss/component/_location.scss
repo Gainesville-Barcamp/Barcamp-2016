@@ -45,13 +45,13 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-top: 25px solid white;
+    border-top: 25px solid $off-white;
     z-index: 10;
     @include breakpoint($tablet_narrow) {
-      border-top: 50px solid white;
+      border-top: 50px solid $off-white;
     }
     @include breakpoint($wide) {
-      border-top: 100px solid white;
+      border-top: 100px solid $off-white;
     }
   }
   &:after {
@@ -62,13 +62,13 @@
     height: 0;
     width: 100%;
     border-right: 100vw solid transparent;
-    border-bottom: 25px solid white;
+    border-bottom: 25px solid $off-white;
     z-index: 10;
     @include breakpoint($tablet_narrow) {
-      border-bottom: 50px solid white;
+      border-bottom: 50px solid $off-white;
     }
     @include breakpoint($wide) {
-      border-bottom: 100px solid white;
+      border-bottom: 100px solid $off-white;
     }
   }
   iframe {

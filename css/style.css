@@ -367,24 +367,12 @@ th {
     box-sizing: border-box; }
 
 body {
+  margin: 0;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
-  html body.admin-menu {
-    margin-top: 130px !important; }
-    @media (min-width: 400px) {
-      html body.admin-menu {
-        margin-top: 90px !important; } }
-    @media (min-width: 600px) {
-      html body.admin-menu {
-        margin-top: 60px !important; } }
-    @media (min-width: 1020px) {
-      html body.admin-menu {
-        margin-top: 29px !important; } }
-
-main ol, main ul {
-  overflow: hidden; }
+  font-smoothing: antialiased;
+  font-family: futura; }
 
 a {
   transition: .2s color;
@@ -395,10 +383,15 @@ img {
   height: auto; }
 
 /**
- * 
  * Font stack
- * 
  */
+@font-face {
+  font-family: 'pt_serifregular';
+  src: url("/fonts/ptserif_regularan/PTF55F-webfont.eot");
+  src: url("/fonts/ptserif_regularan/PTF55F-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ptserif_regularan/PTF55F-webfont.woff") format("woff"), url("/fonts/ptserif_regularan/PTF55F-webfont.ttf") format("truetype"), url("/fonts/ptserif_regularan/PTF55F-webfont.svg#pt_serifregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /**
  * Base form styles
  */
@@ -409,7 +402,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea {
-  border: 1px solid #ccc;
+  border: 1px solid #DBDEE0;
   -moz-appearance: none;
   -webkit-appearance: none;
   padding: 10px 20px;
@@ -498,9 +491,72 @@ blockquote {
  */
 /* generated with grunt-sass-globbing */
 /**
+ * Header
+ */
+.year {
+  position: relative;
+  float: left;
+  width: 25%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 75px;
+  background: #F62D4F;
+  font-family: futura;
+  font-style: italic;
+  font-size: 24px;
+  color: white; }
+  .year:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: block;
+    height: 0;
+    width: 0;
+    border-bottom: 75px solid transparent;
+    border-left: 30px solid #F62D4F; }
+
+.menu {
+  float: right;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  max-width: 70%;
+  margin-right: 5%; }
+
+.menu-item {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+.menu-item-link {
+  line-height: 75px;
+  display: inline-block;
+  padding: 0 25px;
+  color: #353A47;
+  text-transform: uppercase;
+  font-size: 16px; }
+
+/**
  * Hero
  */
 .hero {
-  background: black; }
+  clear: both;
+  background: black;
+  background-size: contain;
+  background-image: url(/images/background-small.jpg);
+  height: calc(100vh - 75px); }
+  @media (min-width: 650px) {
+    .hero {
+      background-image: url(/images/background-medium.jpg); } }
+  @media (min-width: 1100px) {
+    .hero {
+      background-image: url(/images/background-full.jpg);
+      height: 1000px; } }
 
 /* generated with grunt-sass-globbing */

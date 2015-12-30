@@ -1,0 +1,57 @@
+/**
+ * Header
+ */
+
+$header-height: 75px;
+
+.year {
+  position: relative;
+  float: left;
+  width: 25%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: $header-height;
+  background: $red;
+  font-family: $font-sans;
+  font-style: italic;
+  font-size: 24px;
+  color: white;
+  @include breakpoint($tablet_narrow) {
+    $header-height: 100px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: block;
+    height: 0;
+    width: 0;
+    border-bottom: $header-height solid transparent;
+    border-left: $header-height*0.4 solid $red;
+  }
+}
+.menu {
+  float: right;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  max-width: 70%;
+  margin-right: 5%;
+}
+.menu-item {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.menu-item-link {
+  line-height: $header-height;
+  display: inline-block;
+  padding: 0 25px;
+  color: $gray;
+  text-transform: uppercase;
+  font-size: 16px;
+}

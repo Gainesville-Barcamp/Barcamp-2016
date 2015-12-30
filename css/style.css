@@ -826,4 +826,21 @@ blockquote {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
+/**
+ * Sessions section
+ */
+.sessions .copy {
+  clear: left; }
+  @media (min-width: 900px) {
+    .sessions .copy {
+      max-width: 60%;
+      float: left; } }
+
+.sessions-banner {
+  float: left; }
+
+@media (min-width: 900px) {
+  .sessions-button {
+    float: right; } }
+
 /* generated with grunt-sass-globbing */

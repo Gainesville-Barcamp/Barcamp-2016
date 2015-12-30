@@ -4,15 +4,69 @@
 
 .hero {
   clear: both;
+  position: relative;
   background: black;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-image: url(/images/background-small.jpg);
-  height: calc(100vh - #{$header-height});
+  height: calc(95vh - #{$header-height});
   @include breakpoint($tablet_narrow) {
     background-image: url(/images/background-medium.jpg);
+    margin-bottom: 50px; // @todo abstract
   }
   @include breakpoint($normal) {
     background-image: url(/images/background-full.jpg);
-    height: 1000px;
+    height: 0;
+    padding-top: 40%;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 38, 47, 0.95);
+  }
+}
+.hero-logo {
+  position: absolute;
+  @include center;
+  display: block;
+  width: 75%;
+  margin: -10% auto 0 auto;
+  max-width: 300px;
+  @include breakpoint($tablet_narrow) {
+    margin-top: 0;
+  }
+  @include breakpoint($wide) {
+    max-width: 400px;
+  }
+}
+.hero-button {
+  position: absolute;
+  display: inline-block;
+  @include center(x);
+  bottom: 10%;
+  font-size: 25px; // @todo abstract
+  background: $red;
+  color: white;
+  text-transform: uppercase;
+  line-height: 75px;
+  padding: 0 50px;
+  letter-spacing: 0.2em;
+  transition: background .2s;
+  @include breakpoint($tablet_narrow) {
+    bottom: auto;
+    top: calc(100% - 37px)
+  }
+  @include breakpoint($wide) {
+    font-size: 35px;
+    line-height: 100px;
+    padding: 0 75px;
+    top: calc(100% - 50px);
+  }
+  &:hover {
+    background: lighten($red, 5%);
   }
 }

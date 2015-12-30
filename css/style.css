@@ -625,17 +625,76 @@ blockquote {
  */
 .hero {
   clear: both;
+  position: relative;
   background: black;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-image: url(/images/background-small.jpg);
-  height: calc(100vh - 100px); }
+  height: calc(95vh - 100px); }
   @media (min-width: 650px) {
     .hero {
-      background-image: url(/images/background-medium.jpg); } }
+      background-image: url(/images/background-medium.jpg);
+      margin-bottom: 50px; } }
   @media (min-width: 1100px) {
     .hero {
       background-image: url(/images/background-full.jpg);
-      height: 1000px; } }
+      height: 0;
+      padding-top: 40%; } }
+  .hero:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 38, 47, 0.95); }
+
+.hero-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 75%;
+  margin: -10% auto 0 auto;
+  max-width: 300px; }
+  @media (min-width: 650px) {
+    .hero-logo {
+      margin-top: 0; } }
+  @media (min-width: 1600px) {
+    .hero-logo {
+      max-width: 400px; } }
+
+.hero-button {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10%;
+  font-size: 25px;
+  background: #F62D4F;
+  color: white;
+  text-transform: uppercase;
+  line-height: 75px;
+  padding: 0 50px;
+  letter-spacing: 0.2em;
+  transition: background .2s; }
+  @media (min-width: 650px) {
+    .hero-button {
+      bottom: auto;
+      top: calc(100% - 37px); } }
+  @media (min-width: 1600px) {
+    .hero-button {
+      font-size: 35px;
+      line-height: 100px;
+      padding: 0 75px;
+      top: calc(100% - 50px); } }
+  .hero-button:hover {
+    background: #f74563; }
 
 /**
  * Location section

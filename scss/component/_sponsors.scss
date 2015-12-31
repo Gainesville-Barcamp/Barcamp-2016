@@ -1,0 +1,10 @@
+/**
+ * Sponsors
+ */
+
+.sponsors { // @todo reduce padding when sponsor logos are added
+  padding: 50px 0;
+  @include breakpoint($normal) {
+    padding: 100px 0;
+  }
+}

@@ -35,6 +35,7 @@
   width: 75%;
   margin: -10% auto 0 auto;
   max-width: 300px;
+  max-height: 60%;
   @include breakpoint($tablet_narrow) {
     margin-top: 0;
   }
@@ -44,28 +45,23 @@
 }
 .hero-button {
   position: absolute;
-  display: inline-block;
+  margin: 0;
   @include center(x);
-  bottom: 10%;
-  font-size: 25px; // @todo abstract
+  bottom: 5%;
   background: $red;
-  color: white;
-  text-transform: uppercase;
-  line-height: 75px;
-  padding: 0 50px;
   letter-spacing: 0.2em;
-  transition: background .2s;
+  @include breakpoint($smartphone_wide) {
+    line-height: 75px;
+    padding: 0 50px;
+    bottom: 10%;
+  }
   @include breakpoint($tablet_narrow) {
     bottom: auto;
     top: calc(100% - 37px)
   }
   @include breakpoint($wide) {
-    font-size: 35px;
     line-height: 100px;
     padding: 0 75px;
     top: calc(100% - 50px);
-  }
-  &:hover {
-    background: lighten($red, 5%);
   }
 }

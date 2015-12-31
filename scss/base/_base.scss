@@ -33,3 +33,6 @@ img {
 .clearfix {
   @extend %clearfix;
 }
+section {
+  clear: both;
+}

@@ -1,0 +1,86 @@
+/**
+ * Footer
+ */
+
+.footer {
+  position: relative;
+  min-height: 500px; // @todo remove this
+  padding-top: 50px; // Accomodate pseudo element
+  background-color: $gray;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/footer-bg-small.jpg);
+  @include breakpoint($tablet_narrow) {
+    background-image: url(/images/footer-bg-mid.jpg);
+    padding-top: 75px; // Accomodate pseudo element
+  }
+  @include breakpoint($normal) {
+    background-image: url(/images/footer-bg-full.jpg);
+  }
+  @include breakpoint($wide) {
+    padding-top: 125px; // Accomodate pseudo element
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 38, 47, 0.95);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    border-left: 100vw solid transparent;
+    border-top: 25px solid $off-white;
+    z-index: 10;
+    @include breakpoint($tablet_narrow) {
+      border-top: 50px solid $off-white;
+    }
+    @include breakpoint($wide) {
+      border-top: 100px solid $off-white;
+    }
+  }
+  .button {
+    margin-top: 30px;
+  }
+}
+.footer-first,
+.footer-second {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 5;
+  @include breakpoint($tablet_wide) {
+    font-size: 24px;
+    width: 50%;
+    float: left;
+  }
+  p {
+    font-size: inherit;
+  }
+}
+.footer-bottom {
+  clear: both;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 5;
+  padding: 50px 0 25px;
+  @include breakpoint($tablet_wide) {
+    padding: 100px 0 25px;
+    font-size: 18px;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

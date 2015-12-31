@@ -9,17 +9,17 @@ p {
 
 h1,
 h2,
-h3 {
-  font-family: 'PT Serif', serif;
+h3,
+blockquote {
+  font-family: $font-serif;
   font-weight: normal;
 }
 
 h1 {
-  font-family: $font-serif;
   font-size: 45px;
   line-height: 1.1;
-  &.large {
-    font-size: 65px;
+  @include breakpoint($normal) {
+    font-size: 60px;
   }
   a {
     color: inherit;
@@ -27,7 +27,6 @@ h1 {
   }
 }
 h2 {
-  font-family: $font-serif;
   font-size: 40px;
   line-height: 1.2;
   a {
@@ -69,7 +68,7 @@ blockquote {
 .banner {
   font-family: $font-sans;
   position: relative;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0 10px;
   display: inline-block;
   background: $gray;
@@ -77,6 +76,13 @@ blockquote {
   line-height: 24px;
   text-transform: uppercase;
   color: white;
+  @include breakpoint($tablet_narrow) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint($normal) {
+    font-size: 22px;
+    line-height: 32px;
+  }
   &:after {
     content: "";
     height: 0;
@@ -86,6 +92,10 @@ blockquote {
     left: 100%;
     border-bottom: 24px solid transparent;
     border-left: 24px*0.4 solid $gray;
+    @include breakpoint($normal) {
+      border-bottom: 32px solid transparent;
+      border-left: 32px*0.4 solid $gray;
+    }
   }
 }
 %button,
@@ -95,6 +105,16 @@ blockquote {
   line-height:  50px;
   color: white;
   font-size: 24px;
+  margin: 25px 0;
   padding: 0 25px;
   text-transform: uppercase;
+  transition: background .2s;
+  &:hover {
+    background: lighten($red, 5%);
+  }
+  @include breakpoint($wide) {
+    font-size: 35px;
+    line-height: 75px;
+    padding: 0 50px;
+  }
 }

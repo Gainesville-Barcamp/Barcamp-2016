@@ -18,6 +18,7 @@
   }
 }
 .location-button {
+  @include icon('icon-pin.svg');
   position: relative;
   z-index: 20;
   @include breakpoint($tablet_narrow) {

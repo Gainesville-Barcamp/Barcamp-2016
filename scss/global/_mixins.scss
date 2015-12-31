@@ -21,6 +21,31 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@mixin icon($file, $width:15px) {
+  position: relative;
+  padding-left: 45px;
+  @include breakpoint($wide) {
+    padding-left: 70px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: $width;
+    background-image: url(/images/#{$file});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include center(y);
+    @include breakpoint($wide) {
+      left: 25px;
+      height: 25px;
+      width: $width+5;
+    }
+  }
+}
 
 // Center
 // Centers an element with reference to the parent element that is not position: static

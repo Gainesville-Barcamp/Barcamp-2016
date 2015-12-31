@@ -739,6 +739,60 @@ blockquote {
     .footer-bottom a:hover {
       text-decoration: none; }
 
+.footer-button--volunteer {
+  position: relative;
+  padding-left: 45px; }
+  @media (min-width: 1600px) {
+    .footer-button--volunteer {
+      padding-left: 70px; } }
+  .footer-button--volunteer:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-image: url(/images/icon-face.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    @media (min-width: 1600px) {
+      .footer-button--volunteer:before {
+        left: 25px;
+        height: 25px;
+        width: 25px; } }
+
+.footer-button--faq {
+  position: relative;
+  padding-left: 45px; }
+  @media (min-width: 1600px) {
+    .footer-button--faq {
+      padding-left: 70px; } }
+  .footer-button--faq:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-image: url(/images/icon-help.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    @media (min-width: 1600px) {
+      .footer-button--faq:before {
+        left: 25px;
+        height: 25px;
+        width: 25px; } }
+
 /**
  * Header
  */
@@ -904,7 +958,32 @@ blockquote {
 
 .location-button {
   position: relative;
+  padding-left: 45px;
+  position: relative;
   z-index: 20; }
+  @media (min-width: 1600px) {
+    .location-button {
+      padding-left: 70px; } }
+  .location-button:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: 15px;
+    background-image: url(/images/icon-pin.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    @media (min-width: 1600px) {
+      .location-button:before {
+        left: 25px;
+        height: 25px;
+        width: 20px; } }
   @media (min-width: 650px) {
     .location-button {
       float: right; } }
@@ -995,10 +1074,36 @@ blockquote {
 .sessions-banner {
   float: left; }
 
-@media (min-width: 900px) {
-  .sessions-button {
-    float: right;
-    margin-top: 100px; } }
+.sessions-button {
+  position: relative;
+  padding-left: 45px; }
+  @media (min-width: 1600px) {
+    .sessions-button {
+      padding-left: 70px; } }
+  .sessions-button:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: 25px;
+    background-image: url(/images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    @media (min-width: 1600px) {
+      .sessions-button:before {
+        left: 25px;
+        height: 25px;
+        width: 30px; } }
+  @media (min-width: 900px) {
+    .sessions-button {
+      float: right;
+      margin-top: 100px; } }
 
 .sessions-image {
   width: 100vw;
@@ -1012,3 +1117,30 @@ blockquote {
   @media (min-width: 1100px) {
     .sponsors {
       padding: 100px 0; } }
+
+.sponsors-button {
+  position: relative;
+  padding-left: 45px; }
+  @media (min-width: 1600px) {
+    .sponsors-button {
+      padding-left: 70px; } }
+  .sponsors-button:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-image: url(/images/icon-heart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    @media (min-width: 1600px) {
+      .sponsors-button:before {
+        left: 25px;
+        height: 25px;
+        width: 25px; } }

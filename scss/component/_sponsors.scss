@@ -8,3 +8,6 @@
     padding: 100px 0;
   }
 }
+.sponsors-button {
+  @include icon('icon-heart.svg', 20px);
+}

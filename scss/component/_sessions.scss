@@ -24,6 +24,7 @@
   float: left;
 }
 .sessions-button {
+  @include icon('icon-list.svg', 25px);
   @include breakpoint($tablet_wide) {
     float: right;
     margin-top: 100px; // arbitrary number

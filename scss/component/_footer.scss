@@ -65,3 +65,22 @@
     font-size: inherit;
   }
 }
+.footer-bottom {
+  clear: both;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 5;
+  padding: 50px 0 25px;
+  @include breakpoint($tablet_wide) {
+    padding: 100px 0 25px;
+    font-size: 18px;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

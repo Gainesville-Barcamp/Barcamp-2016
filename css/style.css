@@ -712,6 +712,23 @@ blockquote {
   .footer-second p {
     font-size: inherit; }
 
+.footer-bottom {
+  clear: both;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 5;
+  padding: 50px 0 25px; }
+  @media (min-width: 900px) {
+    .footer-bottom {
+      padding: 100px 0 25px;
+      font-size: 18px; } }
+  .footer-bottom a {
+    color: inherit;
+    text-decoration: underline; }
+    .footer-bottom a:hover {
+      text-decoration: none; }
+
 /**
  * Header
  */

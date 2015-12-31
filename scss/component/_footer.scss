@@ -9,7 +9,6 @@
   background-color: $gray;
   background-position: center;
   background-size: cover;
-  background-image: url(/images/footer-bg-small.jpg);
   @include breakpoint($tablet_narrow) {
     background-image: url(/images/footer-bg-mid.jpg);
     padding-top: 75px; // Accomodate pseudo element

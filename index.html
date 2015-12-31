@@ -52,6 +52,7 @@
       1454 Union Rd. Gainesville, FL 32611</h2>
       <a href="#" class="button location-button">View Parging Map</a>
       <div class="map container-break">
+        <div id="map-cover"></div>
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zdflmJ9AT5ko.kmSdwAIPwFjQ" width="100%" height="800"></iframe>
       </div>
   </section>
@@ -87,5 +88,13 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript">
+    function changeClass() {
+      document.getElementById("map-cover").className = "js-selected";
+    }
+    window.onload = function() {
+      document.getElementById("map-cover").addEventListener( 'click' , changeClass );
+    }
+  </script>
 </body>
 </html>

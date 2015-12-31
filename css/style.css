@@ -800,6 +800,9 @@ blockquote {
   @media (min-width: 650px) {
     .menu-item-link {
       padding: 0 25px; } }
+  @media (min-width: 1600px) {
+    .menu-item-link {
+      font-size: 20px; } }
 
 /**
  * Hero
@@ -979,3 +982,12 @@ blockquote {
 .sessions-image {
   width: 100vw;
   max-width: none; }
+
+/**
+ * Sponsors
+ */
+.sponsors {
+  padding: 50px 0; }
+  @media (min-width: 1100px) {
+    .sponsors {
+      padding: 100px 0; } }

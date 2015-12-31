@@ -71,4 +71,7 @@ $header-height: 100px;
   @include breakpoint($tablet_narrow) {
     padding: 0 25px;
   }
+  @include breakpoint($wide) {
+    font-size: 20px;
+  }
 }

@@ -9,17 +9,17 @@ p {
 
 h1,
 h2,
-h3 {
-  font-family: 'PT Serif', serif;
+h3,
+blockquote {
+  font-family: $font-serif;
   font-weight: normal;
 }
 
 h1 {
-  font-family: $font-serif;
   font-size: 45px;
   line-height: 1.1;
-  &.large {
-    font-size: 65px;
+  @include breakpoint($normal) {
+    font-size: 60px;
   }
   a {
     color: inherit;
@@ -27,7 +27,6 @@ h1 {
   }
 }
 h2 {
-  font-family: $font-serif;
   font-size: 40px;
   line-height: 1.2;
   a {
@@ -80,7 +79,7 @@ blockquote {
   @include breakpoint($tablet_narrow) {
     margin-bottom: 10px;
   }
-  @include breakpoint($wide) {
+  @include breakpoint($normal) {
     font-size: 22px;
     line-height: 32px;
   }
@@ -93,7 +92,7 @@ blockquote {
     left: 100%;
     border-bottom: 24px solid transparent;
     border-left: 24px*0.4 solid $gray;
-    @include breakpoint($wide) {
+    @include breakpoint($normal) {
       border-bottom: 32px solid transparent;
       border-left: 32px*0.4 solid $gray;
     }

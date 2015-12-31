@@ -10,11 +10,13 @@
   }
 }
 *::selection {
-
+  color: white;
+  background: rgba($gray, 80%);
 }
 body {
   margin: 0;
   line-height: 1.4;
+  overflow-x: hidden;
   color: $gray;
   background-color: $off-white;
   -webkit-font-smoothing: antialiased;

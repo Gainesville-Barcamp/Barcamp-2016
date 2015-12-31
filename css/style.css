@@ -366,9 +366,18 @@ th {
   *:before, *:after {
     box-sizing: border-box; }
 
+*::-moz-selection {
+  color: white;
+  background: #353a47; }
+
+*::selection {
+  color: white;
+  background: #353a47; }
+
 body {
   margin: 0;
   line-height: 1.4;
+  overflow-x: hidden;
   color: #353A47;
   background-color: #f4f4f4;
   -webkit-font-smoothing: antialiased;
@@ -654,6 +663,7 @@ blockquote {
  */
 .footer {
   position: relative;
+  overflow: hidden;
   min-height: 500px;
   padding-top: 50px;
   background-color: #353A47;

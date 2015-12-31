@@ -36,6 +36,7 @@
   width: 75%;
   margin: -10% auto 0 auto;
   max-width: 300px;
+  max-height: 60%;
   @include breakpoint($tablet_narrow) {
     margin-top: 0;
   }
@@ -47,12 +48,14 @@
   position: absolute;
   margin: 0;
   @include center(x);
-  bottom: 10%;
+  bottom: 5%;
   background: $red;
-  line-height: 75px;
-  padding: 0 50px;
   letter-spacing: 0.2em;
-  
+  @include breakpoint($smartphone_wide) {
+    line-height: 75px;
+    padding: 0 50px;
+    bottom: 10%;
+  }
   @include breakpoint($tablet_narrow) {
     bottom: auto;
     top: calc(100% - 37px)

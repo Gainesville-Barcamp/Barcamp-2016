@@ -4,9 +4,12 @@
 
 .sessions {
   .copy {
-    font-size: 32px; // @todo abstract
+    font-size: 22px; // @todo abstract
     font-family: $font-serif;
     clear: left;
+    @include breakpoint($tablet_narrow) {
+      font-size: 32px; // @todo abstract
+    }
     @include breakpoint($tablet_wide) {
       max-width: 60%;
       float: left;

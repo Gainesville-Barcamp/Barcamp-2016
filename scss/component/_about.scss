@@ -12,58 +12,50 @@
   background-image: url(/images/about-bg.jpg);
   background-repeat: no-repeat;
   background-position : 100% 0;
-  z-index: -1;
   background-size: cover;
-
+  @include breakpoint($tablet_narrow) {
+    margin-top: 100px;
+  }
+  @include breakpoint($normal) {
+    background-size: contain;
+  }
   .copy {
-    padding: 40px;
+    padding: 40px 20px;
     width: 100%;
     height: 100%;
     color: #fff;
     background: $red;
-
-    h1 { margin-top: 0; }
-    p { font-size: 18px; }
-
+    @include breakpoint($tablet_wide) {
+      position: relative;
+      padding: 40px 10px 10px 40px;
+      width: 51%;
+    }
     &:after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -50px;
-      height: 50px;
-      margin-bottom: 50px;
+      bottom: -25px;
+      height: 25px;
       width: 100%;
-      border-right: 100vw solid $off-white;
-      border-top: 50px solid $red;
-    }
-
-  }
-
-  @include breakpoint($normal) {
-    background-size: contain;
-  }
-
-  @include breakpoint($tablet_wide) {
-
-    .copy {
-      position: relative;
-      padding: 40px 10px 10px 40px;
-      width: calc(52% - 70px);
-
-      &:after {
-        border: 0;
+      background: transparent;
+      border-style: solid;
+      border-width: 25px 100vw 0 0;
+      border-color: $red transparent transparent transparent;
+      @include breakpoint($tablet_wide) {
+        height: 100vh;
+        width: 70px;
+        top: auto;
         left: auto;
-        top: 0;
+        bottom: 0;
         right: -70px;
-        height: 100%;
-        width: 50%;
-        transform: skewX(-5.5deg);
-        transform-origin: 100%;
-        z-index: -1;
-        background: $red;
+        border-width: 100vh 70px 0 0;
+        border-color: $red transparent transparent transparent;
       }
-
     }
+
+    h1 { margin-top: 0; }
+    p { font-size: 18px; }
+
   }
 
 }

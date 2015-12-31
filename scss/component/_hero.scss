@@ -12,7 +12,6 @@
   height: calc(95vh - #{$header-height});
   @include breakpoint($tablet_narrow) {
     background-image: url(/images/background-medium.jpg);
-    margin-bottom: 50px; // @todo abstract
   }
   @include breakpoint($normal) {
     background-image: url(/images/background-full.jpg);

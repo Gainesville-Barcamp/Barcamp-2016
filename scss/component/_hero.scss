@@ -9,9 +9,12 @@
   background-size: cover;
   background-position: center;
   background-image: url(/images/background-small.jpg);
-  height: calc(95vh - #{$header-height});
+  height: 400px; // Backup height value for Safari <= 7
+  height: calc(95vh - #{$header-height}); // $header-height defined in _header.scss
   @include breakpoint($tablet_narrow) {
     background-image: url(/images/background-medium.jpg);
+    height: 500px; // Backup height value for Safari <= 7
+    height: calc(95vh - #{$header-height});
   }
   @include breakpoint($normal) {
     background-image: url(/images/background-full.jpg);

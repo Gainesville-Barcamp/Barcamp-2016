@@ -454,6 +454,24 @@ input[type="submit"] {
  * Icons
  */
 /**
+ * Animation Keyframes
+ */
+@-webkit-keyframes slidein {
+  0% {
+    -webkit-transform: translatex(-200%) skew(-22deg);
+            transform: translatex(-200%) skew(-22deg); }
+  100% {
+    -webkit-transform: translatex(0) skew(-22deg);
+            transform: translatex(0) skew(-22deg); } }
+@keyframes slidein {
+  0% {
+    -webkit-transform: translatex(-200%) skew(-22deg);
+            transform: translatex(-200%) skew(-22deg); }
+  100% {
+    -webkit-transform: translatex(0) skew(-22deg);
+            transform: translatex(0) skew(-22deg); } }
+
+/**
  * Typography
  */
 p {
@@ -803,6 +821,14 @@ blockquote {
 /**
  * Header
  */
+.header {
+  background: white; }
+  .header:before, .header:after {
+    content: "";
+    display: table; }
+  .header:after {
+    clear: both; }
+
 .header-year {
   position: relative;
   float: left;
@@ -811,7 +837,6 @@ blockquote {
   margin: 0;
   padding: 0;
   line-height: 75px;
-  background: #F62D4F;
   font-family: futura, helvetica, arial, sans-serif;
   font-style: italic;
   font-size: 24px;
@@ -820,20 +845,29 @@ blockquote {
     .header-year {
       max-width: 250px;
       line-height: 100px; } }
-  .header-year:after {
+  .header-year:before {
     content: "";
     position: absolute;
-    left: 100%;
+    left: -45%;
     top: 0;
+    width: 150%;
+    height: 100%;
     display: block;
-    height: 0;
-    width: 0;
-    border-bottom: 75px solid transparent;
-    border-left: 30px solid #F62D4F; }
-    @media (min-width: 480px) {
-      .header-year:after {
-        border-bottom: 100px solid transparent;
-        border-left: 40px solid #F62D4F; } }
+    -webkit-transform: skew(-22deg);
+        -ms-transform: skew(-22deg);
+            transform: skew(-22deg);
+    background: #F62D4F;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: slidein;
+            animation-name: slidein;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+  .header-year .century,
+  .header-year .year {
+    position: relative; }
   .header-year .barcamp-logo {
     display: none; }
     @media (min-width: 480px) {

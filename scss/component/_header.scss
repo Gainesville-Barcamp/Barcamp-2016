@@ -4,6 +4,10 @@
 
 $header-height: 100px;
 
+.header {
+  @include clearfix;
+  background: white;
+}
 .header-year {
   position: relative;
   float: left;
@@ -12,7 +16,6 @@ $header-height: 100px;
   margin: 0;
   padding: 0;
   line-height: $header-height*0.75;
-  background: $red;
   font-family: $font-sans;
   font-style: italic;
   font-size: 24px;
@@ -21,20 +24,24 @@ $header-height: 100px;
     max-width: 250px;
     line-height: $header-height;
   }
-  &:after {
+  &:before {
     content: "";
     position: absolute;
-    left: 100%;
+    left: -45%;
     top: 0;
+    width: 150%;
+    height: 100%;
     display: block;
-    height: 0;
-    width: 0;
-    border-bottom: $header-height*0.75 solid transparent;
-    border-left: ($header-height*0.75)*0.4 solid $red;
-    @include breakpoint($smartphone_wide) {
-      border-bottom: $header-height solid transparent;
-      border-left: $header-height*0.4 solid $red;
-    }
+    transform: skew(-22deg);
+    background: $red;
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+  }
+  .century,
+  .year {
+    position: relative;
   }
   .barcamp-logo {
     display: none;

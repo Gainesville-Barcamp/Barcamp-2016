@@ -4,11 +4,10 @@
 
 $header-height: 100px;
 
-.year {
+.header-year {
   position: relative;
   float: left;
-  width: 25%;
-  max-width: 200px;
+  width: 30%;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -19,6 +18,7 @@ $header-height: 100px;
   font-size: 24px;
   color: white;
   @include breakpoint($smartphone_wide) {
+    max-width: 250px;
     line-height: $header-height;
   }
   &:after {
@@ -34,6 +34,14 @@ $header-height: 100px;
     @include breakpoint($smartphone_wide) {
       border-bottom: $header-height solid transparent;
       border-left: $header-height*0.4 solid $red;
+    }
+  }
+  .barcamp-logo {
+    display: none;
+    @include breakpoint($smartphone_wide) {
+      transform: translateY(16px);
+      display: inline-block;
+      margin: 0 5px;
     }
   }
 }

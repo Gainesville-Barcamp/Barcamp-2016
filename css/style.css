@@ -803,11 +803,10 @@ blockquote {
 /**
  * Header
  */
-.year {
+.header-year {
   position: relative;
   float: left;
-  width: 25%;
-  max-width: 200px;
+  width: 30%;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -818,9 +817,10 @@ blockquote {
   font-size: 24px;
   color: white; }
   @media (min-width: 480px) {
-    .year {
+    .header-year {
+      max-width: 250px;
       line-height: 100px; } }
-  .year:after {
+  .header-year:after {
     content: "";
     position: absolute;
     left: 100%;
@@ -831,9 +831,18 @@ blockquote {
     border-bottom: 75px solid transparent;
     border-left: 30px solid #F62D4F; }
     @media (min-width: 480px) {
-      .year:after {
+      .header-year:after {
         border-bottom: 100px solid transparent;
         border-left: 40px solid #F62D4F; } }
+  .header-year .barcamp-logo {
+    display: none; }
+    @media (min-width: 480px) {
+      .header-year .barcamp-logo {
+        -webkit-transform: translateY(16px);
+            -ms-transform: translateY(16px);
+                transform: translateY(16px);
+        display: inline-block;
+        margin: 0 5px; } }
 
 .nav {
   float: right;

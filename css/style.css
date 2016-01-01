@@ -646,11 +646,18 @@ blockquote {
       @media (min-width: 900px) {
         .about .copy:after {
           top: 0;
-          left: 100%;
-          width: 70px;
+          left: auto;
+          right: -80px;
+          width: 500px;
           height: 100%;
-          background: linear-gradient(to right bottom, #F62D4F 50%, transparent 51%);
+          background: #F62D4F;
+          -webkit-transform: skewX(-10deg);
+              -ms-transform: skewX(-10deg);
+                  transform: skewX(-10deg);
           border: none; } }
+    .about .copy .copy-content {
+      position: relative;
+      z-index: 10; }
     .about .copy h1 {
       margin-top: 0; }
     .about .copy p {

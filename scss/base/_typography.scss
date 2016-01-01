@@ -110,7 +110,7 @@ blockquote {
   text-transform: uppercase;
   transition: background .2s;
   &:hover {
-    background: lighten($red, 5%);
+    background: darken($red, 10%);
   }
   @include breakpoint($wide) {
     font-size: 35px;

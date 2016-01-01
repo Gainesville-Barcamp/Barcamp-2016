@@ -46,11 +46,11 @@
       @include breakpoint($tablet_wide) { // CSS border arrows won't scale to dynamic content. Move to skewed box.
         top: 0;
         left: auto;
-        right: -80px;
+        right: -55px;
         width: 500px;
         height: 100%;
         background: $red;
-        transform: skewX(-10deg);
+        transform: skewX(-7deg);
         border: none;
       }
     }

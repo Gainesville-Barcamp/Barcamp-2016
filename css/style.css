@@ -647,13 +647,13 @@ blockquote {
         .about .copy:after {
           top: 0;
           left: auto;
-          right: -80px;
+          right: -55px;
           width: 500px;
           height: 100%;
           background: #F62D4F;
-          -webkit-transform: skewX(-10deg);
-              -ms-transform: skewX(-10deg);
-                  transform: skewX(-10deg);
+          -webkit-transform: skewX(-7deg);
+              -ms-transform: skewX(-7deg);
+                  transform: skewX(-7deg);
           border: none; } }
     .about .copy .copy-content {
       position: relative;

@@ -629,6 +629,10 @@ blockquote {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: cover; }
+  @media (min-width: 900px) {
+    .about {
+      width: 94%;
+      overflow: hidden; } }
   @media (min-width: 650px) {
     .about {
       margin-top: 100px; } }
@@ -639,7 +643,7 @@ blockquote {
     padding: 50px 20px;
     width: 100%;
     height: 100%;
-    color: #fff;
+    color: white;
     background: #F62D4F;
     font-size: 18px; }
     @media (min-width: 900px) {

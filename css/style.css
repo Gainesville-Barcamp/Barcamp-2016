@@ -596,6 +596,9 @@ blockquote {
   max-width: 1700px;
   margin: 0 auto; }
 
+.container--small {
+  max-width: 1170px; }
+
 .container-break {
   margin-left: -3%;
   margin-right: -3%; }
@@ -686,6 +689,12 @@ blockquote {
       font-size: inherit; }
       .about .copy p:last-child {
         margin-bottom: 0; }
+
+/**
+ * Content
+ */
+.content {
+  padding: 50px 0; }
 
 /**
  * Footer

@@ -10,6 +10,9 @@ $container-max: 1700px;
   max-width: $container-max;
   margin: 0 auto;
 }
+.container--small {
+  max-width: 1170px;
+}
 .container-break {
   margin-left: (100-$container-width)/-2;
   margin-right: (100-$container-width)/-2;

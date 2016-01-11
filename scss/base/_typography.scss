@@ -72,17 +72,18 @@ blockquote {
   padding: 0 10px;
   display: inline-block;
   background: $gray;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: .10em;
   text-transform: uppercase;
   color: white;
   @include breakpoint($tablet_narrow) {
     margin-bottom: 10px;
   }
-  @include breakpoint($normal) {
-    font-size: 22px;
-    line-height: 32px;
-  }
+  // @include breakpoint($normal) {
+  //   font-size: 22px;
+  //   line-height: 32px;
+  // }
   &:after {
     content: "";
     height: 0;
@@ -90,21 +91,22 @@ blockquote {
     position: absolute;
     top: 0;
     left: 100%;
-    border-bottom: 24px solid transparent;
-    border-left: 24px*0.4 solid $gray;
-    @include breakpoint($normal) {
-      border-bottom: 32px solid transparent;
-      border-left: 32px*0.4 solid $gray;
-    }
+    border-bottom: 30px solid transparent;
+    border-left: 30px*0.4 solid $gray;
+    // @include breakpoint($normal) {
+    //   border-bottom: 32px solid transparent;
+    //   border-left: 32px*0.4 solid $gray;
+    // }
   }
 }
 %button,
 .button {
   display: inline-block;
   background: $red;
-  line-height:  50px;
+  line-height:  55px;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
+  letter-spacing: .10em;
   margin: 25px 0;
   padding: 0 25px;
   text-transform: uppercase;
@@ -115,6 +117,6 @@ blockquote {
   @include breakpoint($wide) {
     font-size: 35px;
     line-height: 75px;
-    padding: 0 50px;
+    padding: 0 55px;
   }
 }

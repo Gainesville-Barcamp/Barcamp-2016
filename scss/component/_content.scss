@@ -4,4 +4,11 @@
 
 .content {
   padding: 50px 0;
+  a {
+    color: $red;
+    &:hover,
+    &:focus {
+      color: darken($red, 20%);
+    }
+  }
 }

@@ -841,7 +841,9 @@ blockquote {
  * Header
  */
 .header {
-  background: white; }
+  background: white;
+  max-width: 100%;
+  overflow: hidden; }
   .header:before, .header:after {
     content: "";
     display: table; }
@@ -906,8 +908,7 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0;
-  overflow: hidden; }
+  padding: 0; }
 
 .menu-item {
   position: relative;

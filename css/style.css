@@ -906,7 +906,8 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
 
 .menu-item {
   position: relative;

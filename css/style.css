@@ -546,6 +546,11 @@ blockquote {
     
     .banner {
       margin-bottom: 10px; } }
+  @media (min-width: 1600px) {
+    
+    .banner {
+      font-size: 22px;
+      line-height: 32px; } }
   
   .banner:after {
     content: "";
@@ -556,6 +561,11 @@ blockquote {
     left: 100%;
     border-bottom: 30px solid transparent;
     border-left: 12px solid #353A47; }
+    @media (min-width: 1600px) {
+      
+      .banner:after {
+        border-bottom: 32px solid transparent;
+        border-left: 12.8px solid #353A47; } }
 
 
 .button {

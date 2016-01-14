@@ -80,10 +80,10 @@ blockquote {
   @include breakpoint($tablet_narrow) {
     margin-bottom: 10px;
   }
-  // @include breakpoint($normal) {
-  //   font-size: 22px;
-  //   line-height: 32px;
-  // }
+  @include breakpoint($wide) {
+    font-size: 22px;
+    line-height: 32px;
+  }
   &:after {
     content: "";
     height: 0;
@@ -93,10 +93,10 @@ blockquote {
     left: 100%;
     border-bottom: 30px solid transparent;
     border-left: 30px*0.4 solid $gray;
-    // @include breakpoint($normal) {
-    //   border-bottom: 32px solid transparent;
-    //   border-left: 32px*0.4 solid $gray;
-    // }
+    @include breakpoint($wide) {
+      border-bottom: 32px solid transparent;
+      border-left: 32px*0.4 solid $gray;
+    }
   }
 }
 %button,

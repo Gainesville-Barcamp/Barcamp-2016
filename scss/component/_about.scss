@@ -7,16 +7,16 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  background-image: url(/images/about-bg.jpg);
-  background-repeat: no-repeat;
-  background-position : 100% 0;
-  background-size: cover;
-  @include breakpoint($tablet_wide) {
-    width: 94%;
-    overflow: hidden;
-  }
   @include breakpoint($tablet_narrow) {
     margin-top: 100px;
+  }
+  @include breakpoint($tablet_wide) {
+    background-image: url(/images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-position : 100% 0;
+    background-size: cover;
+    width: 94%;
+    overflow: hidden;
   }
   @include breakpoint($normal) {
     background-size: contain;

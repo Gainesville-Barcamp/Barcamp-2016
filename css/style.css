@@ -629,18 +629,18 @@ blockquote {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
-  background-image: url(/images/about-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: cover; }
-  @media (min-width: 900px) {
-    .about {
-      width: 94%;
-      overflow: hidden; } }
+  width: 100%; }
   @media (min-width: 650px) {
     .about {
       margin-top: 100px; } }
+  @media (min-width: 900px) {
+    .about {
+      background-image: url(/images/about-bg.jpg);
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: cover;
+      width: 94%;
+      overflow: hidden; } }
   @media (min-width: 1100px) {
     .about {
       background-size: contain; } }

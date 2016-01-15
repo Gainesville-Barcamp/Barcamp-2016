@@ -518,6 +518,9 @@ h3 {
     color: inherit;
     transition: color .2s; }
 
+ul {
+  font-size: 1.1em; }
+
 blockquote {
   position: relative;
   font-size: 30px; }

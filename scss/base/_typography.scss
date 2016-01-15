@@ -52,6 +52,9 @@ h3 {
     transition: color .2s;
   }
 }
+ul {
+  font-size: 1.1em; // Fix font rendering in Chrome on Windows 10
+}
 blockquote {
   position: relative;
   font-size: 30px;

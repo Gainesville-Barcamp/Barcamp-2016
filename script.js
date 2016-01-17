@@ -1,7 +1,8 @@
 var navIcon = document.querySelector('.nav-menu-icon'),
     navMenu = document.querySelector('.menu'),
     overlay = document.querySelector('.overlay'),
-    mapcover = document.querySelector('.map-cover');
+    mapcover = document.querySelector('.map-cover'),
+    anchorLink = document.querySelector('a[href*=\"/#\"');
 
 function addClass() {
   mapcover.className += ' js-selected';
@@ -20,5 +21,9 @@ window.onload = function() {
   if (navIcon) {
     navIcon.addEventListener('click', toggleNav);
     // navIcon.addEventListener('touchstart', toggleNav);
+  }
+  // Make sure the nav disappears when jumping to an anchor
+  if (anchorLink) {
+    anchorLink.addEventListener('click', toggleNav);
   }
 };

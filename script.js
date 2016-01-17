@@ -1,9 +1,10 @@
 var navIcon = document.querySelector('.nav-menu-icon'),
     navMenu = document.querySelector('.menu'),
-    overlay = document.querySelector('.overlay');
+    overlay = document.querySelector('.overlay'),
+    mapcover = document.querySelector('.map-cover');
 
-function changeClass() {
-  document.getElementById('map-cover').className = 'js-selected';
+function addClass() {
+  mapcover.className += ' js-selected';
 }
 
 function toggleNav() {
@@ -13,7 +14,11 @@ function toggleNav() {
 }
 
 window.onload = function() {
-  document.getElementById('map-cover').addEventListener( 'click' , changeClass );
-  navIcon.addEventListener('click', toggleNav);
-  // navIcon.addEventListener('touchstart', toggleNav);
+  if (mapcover) {
+    mapcover.addEventListener( 'click' , addClass );
+  }
+  if (navIcon) {
+    navIcon.addEventListener('click', toggleNav);
+    // navIcon.addEventListener('touchstart', toggleNav);
+  }
 };

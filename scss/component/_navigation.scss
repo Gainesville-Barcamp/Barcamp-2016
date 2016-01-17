@@ -119,7 +119,7 @@ $nav-break: $tablet_wide;
   color: white;
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 50px;
   @include breakpoint($nav-break) {
     color: $gray;
     line-height: $header-height; // $header-height defined in _header.scss

@@ -56,6 +56,7 @@ $nav-break: $tablet_wide;
   transition: z-index .2s;
   transition-delay: .4s;
   @include breakpoint($nav-break) {
+    perspective: none;
     background: transparent;
     position: static;
     display: flex;
@@ -109,6 +110,9 @@ $nav-break: $tablet_wide;
     transition: transform .2s;
     &:hover {
       transform: rotatex(45deg);
+      @include breakpoint($nav-break) {
+        transform: rotate(0); // Ensure mobile hover effects don't show on desktop widths
+      }
     }
   }
 }

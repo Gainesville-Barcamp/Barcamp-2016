@@ -1151,6 +1151,8 @@ blockquote {
   transition-delay: .4s; }
   @media (min-width: 900px) {
     .menu {
+      -webkit-perspective: none;
+              perspective: none;
       background: transparent;
       position: static;
       display: -webkit-flex;
@@ -1219,6 +1221,11 @@ blockquote {
       -webkit-transform: rotatex(45deg);
           -ms-transform: rotatex(45deg);
               transform: rotatex(45deg); }
+      @media (min-width: 900px) {
+        .js-nav-active .menu-item:hover {
+          -webkit-transform: rotate(0);
+              -ms-transform: rotate(0);
+                  transform: rotate(0); } }
 
 .menu-item-link {
   position: relative;

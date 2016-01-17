@@ -1134,7 +1134,6 @@ blockquote {
       transition: fill .2s; }
 
 .menu {
-  visibility: hidden;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1145,12 +1144,13 @@ blockquote {
   max-width: 350px;
   margin: 0;
   padding: 0;
-  z-index: 100;
+  z-index: -1;
   -webkit-perspective: 500px;
-          perspective: 500px; }
+          perspective: 500px;
+  transition: z-index .2s;
+  transition-delay: .4s; }
   @media (min-width: 900px) {
     .menu {
-      visibility: visible;
       background: transparent;
       position: static;
       display: -webkit-flex;
@@ -1162,9 +1162,12 @@ blockquote {
       left: auto;
       -webkit-transform: translate(0, 0);
           -ms-transform: translate(0, 0);
-              transform: translate(0, 0); } }
+              transform: translate(0, 0);
+      z-index: 100; } }
   .menu.js-nav-active {
-    visibility: visible; }
+    z-index: 100;
+    transition: none;
+    transition-delay: 0; }
 
 .menu-item {
   position: relative;
@@ -1258,12 +1261,12 @@ blockquote {
   background: black;
   z-index: 50;
   transition: opacity .2s; }
-  @media (min-width: 900px) {
-    .overlay {
-      display: none; } }
   .overlay.js-active {
     display: block;
     opacity: 0.8; }
+    @media (min-width: 900px) {
+      .overlay.js-active {
+        display: none; } }
 
 /**
  * Sessions section

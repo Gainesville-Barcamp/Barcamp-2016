@@ -45,26 +45,29 @@ $nav-break: $tablet_wide;
   }
 }
 .menu {
-  visibility: hidden;
   @include center;
   position: fixed;
   width: 80%;
   max-width: 350px;
   margin: 0;
   padding: 0;
-  z-index: 100;
+  z-index: -1;
   perspective: 500px;
+  transition: z-index .2s;
+  transition-delay: .4s;
   @include breakpoint($nav-break) {
-    visibility: visible;
     background: transparent;
     position: static;
     display: flex;
     width: auto;
     max-width: none;
     @include center(none);
+    z-index: 100;
   }
   &.js-nav-active {
-    visibility: visible;
+    z-index: 100;
+    transition: none;
+    transition-delay: 0;
   }
 }
 .menu-item {

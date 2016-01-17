@@ -107,8 +107,7 @@ $nav-break: $tablet_wide;
   .js-nav-active & {
     transform: rotate(0);
     transition: transform .2s;
-    &:hover,
-    &:focus {
+    &:hover {
       transform: rotatex(45deg);
     }
   }
@@ -120,6 +119,10 @@ $nav-break: $tablet_wide;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 50px;
+  &:focus {
+    background: white;
+    color: $red;
+  }
   @include breakpoint($nav-break) {
     color: $gray;
     line-height: $header-height; // $header-height defined in _header.scss
@@ -127,6 +130,7 @@ $nav-break: $tablet_wide;
     padding: 0 15px;
     &:hover,
     &:focus {
+      background: transparent;
       color: white;
     }
   }

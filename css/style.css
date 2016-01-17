@@ -1215,7 +1215,7 @@ blockquote {
             transform: rotate(0);
     transition: -webkit-transform .2s;
     transition: transform .2s; }
-    .js-nav-active .menu-item:hover, .js-nav-active .menu-item:focus {
+    .js-nav-active .menu-item:hover {
       -webkit-transform: rotatex(45deg);
           -ms-transform: rotatex(45deg);
               transform: rotatex(45deg); }
@@ -1227,6 +1227,9 @@ blockquote {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 50px; }
+  .menu-item-link:focus {
+    background: white;
+    color: #F62D4F; }
   @media (min-width: 900px) {
     .menu-item-link {
       color: #353A47;
@@ -1234,6 +1237,7 @@ blockquote {
       display: inline-block;
       padding: 0 15px; }
       .menu-item-link:hover, .menu-item-link:focus {
+        background: transparent;
         color: white; } }
   @media (min-width: 1100px) {
     .menu-item-link {

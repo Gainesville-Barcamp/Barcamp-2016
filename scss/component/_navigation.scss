@@ -1,0 +1,142 @@
+/**
+ * Navigation
+ */
+
+$nav-break: $tablet_wide;
+
+.nav {
+  float: right;
+  max-width: 75%;
+}
+.nav-menu-icon {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: white;
+  color: white;
+  z-index: 100;
+  outline:  none;
+  transition: background-color .2s;
+  @include breakpoint($smartphone_wide) {
+    right: 15px;
+    top: 15px;
+  }
+  @include breakpoint($nav-break) {
+    display: none;
+  }
+  &.js-nav-active {
+    background: $red;
+    svg path {
+      fill: white;
+    }
+  }
+  svg {
+    @include center;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    path {
+      fill: $red;
+      transition: fill .2s;
+    }
+  }
+}
+.menu {
+  visibility: hidden;
+  @include center;
+  position: fixed;
+  width: 80%;
+  max-width: 350px;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  perspective: 500px;
+  @include breakpoint($nav-break) {
+    visibility: visible;
+    background: transparent;
+    position: static;
+    display: flex;
+    width: auto;
+    max-width: none;
+    @include center(none);
+  }
+  &.js-nav-active {
+    visibility: visible;
+  }
+}
+.menu-item {
+  position: relative;
+  background: $red;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 15px 0;
+  transform: rotatex(120deg);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  backface-visibility: hidden;
+  transition-timing-function: cubic-bezier(.6,-0.47,.42,1.4);
+  @include breakpoint($nav-break) {
+    float: left;
+    margin: 0;
+    transform: none;
+    background: transparent;
+    &:before {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $red;
+      transform: skew(-22deg);
+      transition: opacity .2s;
+    }
+    &:hover:before,
+    &:focus:before {
+      opacity: 1;
+    }
+  }
+  .js-nav-active & {
+    transform: rotate(0);
+    transition: transform .2s;
+    &:hover,
+    &:focus {
+      transform: rotatex(45deg);
+    }
+  }
+}
+.menu-item-link {
+  position: relative;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 40px;
+  @include breakpoint($nav-break) {
+    color: $gray;
+    line-height: $header-height; // $header-height defined in _header.scss
+    display: inline-block;
+    padding: 0 15px;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+  @include breakpoint($normal) {
+    padding: 0 25px;
+  }
+  // Adjust line height based on screen height
+  @media (min-height: 500px) and (max-width: $nav-break) {
+    line-height: 60px;
+    font-size: 25px;
+  }
+  @media (min-height: 700px) and (max-width: $nav-break) {
+    line-height: 80px;
+    font-size: 30px;
+  }
+}

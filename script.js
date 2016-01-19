@@ -1,11 +1,11 @@
 var navIcon = document.querySelector('.nav-menu-icon'),
     navMenu = document.querySelector('.menu'),
     overlay = document.querySelector('.overlay'),
-    mapcover = document.querySelector('.map-cover'),
+    mapCover = document.querySelector('.map-cover'),
     anchorLink = document.querySelector('a[href*="/#"]');
 
-function addClass() {
-  mapcover.className += ' js-selected';
+function enableMapMove() {
+  mapCover.classList.add('js-selected');
 }
 
 function toggleNav(evt) {
@@ -15,9 +15,15 @@ function toggleNav(evt) {
   overlay.classList.toggle('js-active');
 }
 
+function removeNav() {
+  navIcon.classList.remove('js-nav-active');
+  navMenu.classList.remove('js-nav-active');
+  overlay.classList.remove('js-active');
+}
+
 window.onload = function() {
-  if (mapcover) {
-    mapcover.addEventListener( 'click' , addClass );
+  if (mapCover) {
+    mapCover.addEventListener( 'click' , enableMapMove );
   }
   if (navIcon) {
     navIcon.addEventListener('click', toggleNav);
@@ -25,6 +31,6 @@ window.onload = function() {
   }
   // // Make sure the nav disappears when jumping to an anchor
   if (anchorLink) {
-    anchorLink.addEventListener('click', toggleNav);
+    anchorLink.addEventListener('click', removeNav);
   }
 };

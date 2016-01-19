@@ -8,7 +8,8 @@ function addClass() {
   mapcover.className += ' js-selected';
 }
 
-function toggleNav() {
+function toggleNav(evt) {
+  evt.preventDefault(); // Prevents double clicking with both touchstart() and click()
   navIcon.classList.toggle('js-nav-active');
   navMenu.classList.toggle('js-nav-active');
   overlay.classList.toggle('js-active');
@@ -20,7 +21,7 @@ window.onload = function() {
   }
   if (navIcon) {
     navIcon.addEventListener('click', toggleNav);
-    // navIcon.addEventListener('touchstart', toggleNav);
+    navIcon.addEventListener('touchstart', toggleNav);
   }
   // // Make sure the nav disappears when jumping to an anchor
   if (anchorLink) {

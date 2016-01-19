@@ -768,6 +768,10 @@ blockquote {
   .footer-first p,
   .footer-second p {
     font-size: inherit; }
+    @media (min-width: 1400px) {
+      .footer-first p,
+      .footer-second p {
+        min-height: 115px; } }
 
 .footer-bottom {
   clear: both;
@@ -775,16 +779,30 @@ blockquote {
   color: white;
   text-align: center;
   z-index: 5;
-  padding: 50px 0 25px; }
+  padding: 40px 0 40px 0; }
   @media (min-width: 900px) {
     .footer-bottom {
-      padding: 100px 0 25px;
       font-size: 18px; } }
+  .footer-bottom p {
+    padding: 0; }
   .footer-bottom a {
     color: inherit;
     text-decoration: underline; }
     .footer-bottom a:hover {
       text-decoration: none; }
+  .footer-bottom ul.social {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+    list-style-type: none;
+    border-top: 1px solid #353A47; }
+    @media (min-width: 900px) {
+      .footer-bottom ul.social {
+        max-width: 85%; } }
+    .footer-bottom ul.social li {
+      display: inline-block;
+      margin: 0 40px; }
 
 .footer-button--volunteer {
   position: relative;
@@ -1032,7 +1050,7 @@ blockquote {
   height: 0;
   padding-top: 500px;
   position: relative;
-  top: -30px;
+  top: 0;
   overflow: hidden; }
   @media (min-width: 900px) {
     .map {

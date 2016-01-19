@@ -63,24 +63,45 @@
   }
   p {
     font-size: inherit;
+    @include breakpoint($normal_wide) {
+      min-height: 115px;
+    }
   }
 }
+
 .footer-bottom {
   clear: both;
   position: relative;
   color: white;
   text-align: center;
   z-index: 5;
-  padding: 50px 0 25px;
+  padding: 40px 0 40px 0;
   @include breakpoint($tablet_wide) {
-    padding: 100px 0 25px;
     font-size: 18px;
+  }
+  p {
+    padding: 0;
   }
   a {
     color: inherit;
     text-decoration: underline;
     &:hover {
       text-decoration: none;
+    }
+  }
+  ul.social {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+    list-style-type: none;
+    border-top: 1px solid $gray;
+    @include breakpoint($tablet_wide) {
+      max-width: 85%;
+    }
+    li {
+      display: inline-block;
+      margin: 0 40px;
     }
   }
 }

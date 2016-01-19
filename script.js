@@ -1,8 +1,8 @@
 var navIcon = document.querySelector('.nav-menu-icon'),
     navMenu = document.querySelector('.menu'),
     overlay = document.querySelector('.overlay'),
-    mapcover = document.querySelector('.map-cover'),
-    anchorLink = document.querySelector('a[href*=\"/#\"');
+    mapcover = document.querySelector('.map-cover');
+    // anchorLink = document.querySelector('a[href*=\"/#\"');
 
     console.log(navIcon);
 

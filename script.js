@@ -22,7 +22,7 @@ window.onload = function() {
   }
   if (navIcon) {
     navIcon.addEventListener('click', toggleNav);
-    navIcon.addEventListener('touchstart', toggleNav);
+    // navIcon.addEventListener('touchstart', toggleNav);
   }
   // // Make sure the nav disappears when jumping to an anchor
   // if (anchorLink) {

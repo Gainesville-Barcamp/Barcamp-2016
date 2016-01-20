@@ -122,4 +122,20 @@ blockquote {
     line-height: 75px;
     padding: 0 55px;
   }
+  .content & {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  &.medium {
+    line-height: 45px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  &.right {
+    @include breakpoint($normal) {
+      float: right;
+    }
+  }
 }

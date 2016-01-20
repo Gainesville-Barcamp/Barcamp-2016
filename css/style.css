@@ -591,6 +591,21 @@ blockquote {
       font-size: 35px;
       line-height: 75px;
       padding: 0 55px; } }
+  .content
+  .button {
+    color: white; }
+    .content
+    .button:hover {
+      color: white; }
+  
+  .button.medium {
+    line-height: 45px;
+    font-size: 18px;
+    padding: 0 20px; }
+  @media (min-width: 1100px) {
+    
+    .button.right {
+      float: right; } }
 
 /* generated with grunt-sass-globbing */
 /**

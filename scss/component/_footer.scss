@@ -89,19 +89,32 @@
       text-decoration: none;
     }
   }
-  ul.social {
+  .social {
     clear: both;
     display: block;
     margin: 0 auto;
-    padding: 40px 0 40px 0;
-    list-style-type: none;
-    border-top: 1px solid $gray;
+    list-style: none;
     @include breakpoint($tablet_wide) {
       max-width: 85%;
     }
     li {
       display: inline-block;
-      margin: 0 40px;
+      margin: 0;
+      @include breakpoint($tablet_wide) {
+        margin: 0 20px;
+      }
+    }
+    a {
+      display: block;
+      padding: 20px;  // Larger tap target
+      &:hover path,
+      &:focus path {
+        fill: white;
+      }
+    }
+    path {
+      fill: rgba(#ffffff, 0.75);
+      transition: fill .2s;
     }
   }
 }

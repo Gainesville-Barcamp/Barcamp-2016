@@ -790,19 +790,29 @@ blockquote {
     text-decoration: underline; }
     .footer-bottom a:hover {
       text-decoration: none; }
-  .footer-bottom ul.social {
+  .footer-bottom .social {
     clear: both;
     display: block;
     margin: 0 auto;
-    padding: 40px 0 40px 0;
-    list-style-type: none;
-    border-top: 1px solid #353A47; }
+    list-style: none; }
     @media (min-width: 900px) {
-      .footer-bottom ul.social {
+      .footer-bottom .social {
         max-width: 85%; } }
-    .footer-bottom ul.social li {
+    .footer-bottom .social li {
       display: inline-block;
-      margin: 0 40px; }
+      margin: 0; }
+      @media (min-width: 900px) {
+        .footer-bottom .social li {
+          margin: 0 20px; } }
+    .footer-bottom .social a {
+      display: block;
+      padding: 20px; }
+      .footer-bottom .social a:hover path,
+      .footer-bottom .social a:focus path {
+        fill: white; }
+    .footer-bottom .social path {
+      fill: rgba(255, 255, 255, 0.75);
+      transition: fill .2s; }
 
 .footer-button--volunteer {
   position: relative;

@@ -33,3 +33,6 @@ $container-max: 1700px;
     padding-right: calc(-1 * 50vw + #{$container-max/2});
   }
 }
+.copy {
+  @include clearfix;
+}

@@ -11,3 +11,27 @@
 .sponsors-button {
   @include icon('icon-heart.svg', 20px);
 }
+.sponsors-list {
+  padding: 0;
+  margin: 0;
+}
+.sponsor-list-item {
+  float: left;
+  width: 50%;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  &:nth-child(odd) {
+    clear: left;
+  }
+  @include breakpoint($normal) {
+    width: 25%;
+    padding: 40px;
+    &:nth-child(odd) {
+      clear: none;
+    }
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+  }
+}

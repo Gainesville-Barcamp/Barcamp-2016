@@ -639,6 +639,13 @@ blockquote {
       padding-left: calc(-1 * 50vw + 850px);
       padding-right: calc(-1 * 50vw + 850px); } }
 
+.copy:before, .copy:after {
+  content: "";
+  display: table; }
+
+.copy:after {
+  clear: both; }
+
 /* generated with grunt-sass-globbing */
 /**
  * About
@@ -725,6 +732,7 @@ blockquote {
  */
 .footer {
   position: relative;
+  clear: both;
   overflow: hidden;
   min-height: 500px;
   padding-top: 50px;
@@ -1414,3 +1422,24 @@ blockquote {
         left: 25px;
         height: 25px;
         width: 25px; } }
+
+.sponsors-list {
+  padding: 0;
+  margin: 0; }
+
+.sponsor-list-item {
+  float: left;
+  width: 50%;
+  list-style: none;
+  padding: 20px;
+  margin: 0; }
+  .sponsor-list-item:nth-child(odd) {
+    clear: left; }
+  @media (min-width: 1100px) {
+    .sponsor-list-item {
+      width: 25%;
+      padding: 40px; }
+      .sponsor-list-item:nth-child(odd) {
+        clear: none; }
+      .sponsor-list-item:nth-child(4n+1) {
+        clear: left; } }

@@ -52,7 +52,7 @@ $nav-break: $tablet_wide;
   margin: 0;
   padding: 0;
   z-index: -1;
-  perspective: 500px;
+  perspective: 5px;
   transition: z-index .2s;
   transition-delay: .4s;
   @include breakpoint($nav-break) {

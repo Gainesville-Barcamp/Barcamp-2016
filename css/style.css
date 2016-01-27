@@ -1197,8 +1197,8 @@ blockquote {
   margin: 0;
   padding: 0;
   z-index: -1;
-  -webkit-perspective: 5px;
-          perspective: 5px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
   transition: z-index .2s;
   transition-delay: .4s; }
   @media (min-width: 900px) {

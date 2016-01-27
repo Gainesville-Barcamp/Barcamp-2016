@@ -1,5 +1,5 @@
 /**
- * Sponsors
+ * Sponsors section on front page
  */
 
 .sponsors { // @todo reduce padding when sponsor logos are added
@@ -8,30 +8,47 @@
     padding: 100px 0;
   }
 }
+
+/**
+ * Sponsors Page
+ */
+
 .sponsors-button {
   @include icon('icon-heart.svg', 20px);
 }
-.sponsors-list {
+.sponsor-level {
+  text-align: center;
+}
+.sponsor-list {
   padding: 0;
   margin: 0;
+  font-size: 0;
+  div:not(.sponsors-front) & {
+    text-align: center;
+  }
 }
 .sponsor-list-item {
-  float: left;
-  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
   list-style: none;
   padding: 20px;
-  margin: 0;
-  &:nth-child(odd) {
-    clear: left;
-  }
+  margin: 20px 0;
   @include breakpoint($normal) {
-    width: 25%;
-    padding: 40px;
-    &:nth-child(odd) {
-      clear: none;
+    margin: 40px 0;
+  }
+  .sponsor-list--cypress & {
+    width: 100%;
+    @include breakpoint($normal) {
+      width: 49%;
+      padding: 40px;
     }
-    &:nth-child(4n+1) {
-      clear: left;
+  }
+  .sponsor-list--sapling & {
+    width: 49%;
+    @include breakpoint($normal) {
+      width: 24%;
+      padding: 40px;
     }
   }
 }

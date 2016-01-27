@@ -574,17 +574,21 @@ blockquote {
 .button {
   display: inline-block;
   background: #F62D4F;
-  line-height: 55px;
   color: white;
   font-size: 22px;
   letter-spacing: .10em;
   margin: 25px 0;
-  padding: 0 25px;
+  padding: 10px 25px;
   text-transform: uppercase;
   transition: background .2s; }
   
   .button:hover {
     background: #e60a2f; }
+  @media (min-width: 480px) {
+    
+    .button {
+      line-height: 55px;
+      padding: 0 25px; } }
   @media (min-width: 1600px) {
     
     .button {
@@ -1388,7 +1392,7 @@ blockquote {
   max-width: none; }
 
 /**
- * Sponsors
+ * Sponsors section on front page
  */
 .sponsors {
   padding: 50px 0; }
@@ -1396,6 +1400,9 @@ blockquote {
     .sponsors {
       padding: 100px 0; } }
 
+/**
+ * Sponsors Page
+ */
 .sponsors-button {
   position: relative;
   padding-left: 45px; }
@@ -1423,23 +1430,35 @@ blockquote {
         height: 25px;
         width: 25px; } }
 
-.sponsors-list {
+.sponsor-level {
+  text-align: center; }
+
+.sponsor-list {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-size: 0; }
+  div:not(.sponsors-front) .sponsor-list {
+    text-align: center; }
 
 .sponsor-list-item {
-  float: left;
-  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
   list-style: none;
   padding: 20px;
-  margin: 0; }
-  .sponsor-list-item:nth-child(odd) {
-    clear: left; }
+  margin: 20px 0; }
   @media (min-width: 1100px) {
     .sponsor-list-item {
-      width: 25%;
-      padding: 40px; }
-      .sponsor-list-item:nth-child(odd) {
-        clear: none; }
-      .sponsor-list-item:nth-child(4n+1) {
-        clear: left; } }
+      margin: 40px 0; } }
+  .sponsor-list--cypress .sponsor-list-item {
+    width: 100%; }
+    @media (min-width: 1100px) {
+      .sponsor-list--cypress .sponsor-list-item {
+        width: 49%;
+        padding: 40px; } }
+  .sponsor-list--sapling .sponsor-list-item {
+    width: 49%; }
+    @media (min-width: 1100px) {
+      .sponsor-list--sapling .sponsor-list-item {
+        width: 24%;
+        padding: 40px; } }

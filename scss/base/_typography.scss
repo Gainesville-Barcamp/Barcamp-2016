@@ -106,16 +106,19 @@ blockquote {
 .button {
   display: inline-block;
   background: $red;
-  line-height:  55px;
   color: white;
   font-size: 22px;
   letter-spacing: .10em;
   margin: 25px 0;
-  padding: 0 25px;
+  padding: 10px 25px;
   text-transform: uppercase;
   transition: background .2s;
   &:hover {
     background: darken($red, 10%);
+  }
+  @include breakpoint($smartphone_wide) {
+    line-height:  55px;
+    padding: 0 25px;
   }
   @include breakpoint($wide) {
     font-size: 35px;

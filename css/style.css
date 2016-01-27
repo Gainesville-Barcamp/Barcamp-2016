@@ -1442,9 +1442,18 @@ blockquote {
   width: 49%;
   list-style: none;
   padding: 20px;
-  margin: 40px 0; }
+  margin: 20px 0; }
+  @media (min-width: 1100px) {
+    .sponsor-list-item {
+      margin: 40px 0; } }
+  .sponsor-list--cypress .sponsor-list-item {
+    width: 100%; }
+    @media (min-width: 1100px) {
+      .sponsor-list--cypress .sponsor-list-item {
+        width: 49%;
+        padding: 40px; } }
   .sponsor-list--sapling .sponsor-list-item {
-    width: 24%; }
+    width: 49%; }
     @media (min-width: 1100px) {
       .sponsor-list--sapling .sponsor-list-item {
         width: 24%;

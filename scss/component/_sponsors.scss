@@ -33,9 +33,19 @@
   width: 49%;
   list-style: none;
   padding: 20px;
-  margin: 40px 0;
+  margin: 20px 0;
+  @include breakpoint($normal) {
+    margin: 40px 0;
+  }
+  .sponsor-list--cypress & {
+    width: 100%;
+    @include breakpoint($normal) {
+      width: 49%;
+      padding: 40px;
+    }
+  }
   .sponsor-list--sapling & {
-    width: 24%;
+    width: 49%;
     @include breakpoint($normal) {
       width: 24%;
       padding: 40px;

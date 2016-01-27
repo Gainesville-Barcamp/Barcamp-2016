@@ -574,17 +574,21 @@ blockquote {
 .button {
   display: inline-block;
   background: #F62D4F;
-  line-height: 55px;
   color: white;
   font-size: 22px;
   letter-spacing: .10em;
   margin: 25px 0;
-  padding: 0 25px;
+  padding: 10px 25px;
   text-transform: uppercase;
   transition: background .2s; }
   
   .button:hover {
     background: #e60a2f; }
+  @media (min-width: 480px) {
+    
+    .button {
+      line-height: 55px;
+      padding: 0 25px; } }
   @media (min-width: 1600px) {
     
     .button {

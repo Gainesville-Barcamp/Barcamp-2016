@@ -4,6 +4,7 @@
 
 .sponsors { // @todo reduce padding when sponsor logos are added
   padding: 50px 0;
+  text-align: center;
   @include breakpoint($normal) {
     padding: 100px 0;
   }
@@ -11,27 +12,27 @@
 .sponsors-button {
   @include icon('icon-heart.svg', 20px);
 }
-.sponsors-list {
+.sponsor-level {
+  text-align: center;
+}
+.sponsor-list {
   padding: 0;
   margin: 0;
+  font-size: 0;
+  text-align: center;
 }
 .sponsor-list-item {
-  float: left;
-  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
   list-style: none;
   padding: 20px;
   margin: 0;
-  &:nth-child(odd) {
-    clear: left;
-  }
-  @include breakpoint($normal) {
-    width: 25%;
-    padding: 40px;
-    &:nth-child(odd) {
-      clear: none;
-    }
-    &:nth-child(4n+1) {
-      clear: left;
+  .sponsor-list--sapling & {
+    width: 24%;
+    @include breakpoint($normal) {
+      width: 24%;
+      padding: 40px;
     }
   }
 }

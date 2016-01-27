@@ -1,14 +1,18 @@
 /**
- * Sponsors
+ * Sponsors section on front page
  */
 
 .sponsors { // @todo reduce padding when sponsor logos are added
   padding: 50px 0;
-  text-align: center;
   @include breakpoint($normal) {
     padding: 100px 0;
   }
 }
+
+/**
+ * Sponsors Page
+ */
+
 .sponsors-button {
   @include icon('icon-heart.svg', 20px);
 }
@@ -19,7 +23,9 @@
   padding: 0;
   margin: 0;
   font-size: 0;
-  text-align: center;
+  div:not(.sponsors-front) & {
+    text-align: center;
+  }
 }
 .sponsor-list-item {
   display: inline-block;
@@ -27,7 +33,7 @@
   width: 49%;
   list-style: none;
   padding: 20px;
-  margin: 0;
+  margin: 40px 0;
   .sponsor-list--sapling & {
     width: 24%;
     @include breakpoint($normal) {

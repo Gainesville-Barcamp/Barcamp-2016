@@ -42,3 +42,14 @@ window.onload = function() {
     extLink.addEventListener('click', removeNav);
   }
 };
+
+// Add a class to the header when scrolled down 100px
+var scrollElement = document.querySelector('.header');
+window.onscroll = function() {
+  if (window.scrollY > 100) {
+    scrollElement.classList.add('js-scrolled');
+  }
+  else {
+    scrollElement.classList.remove('js-scrolled');
+  }
+};

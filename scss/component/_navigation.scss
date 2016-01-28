@@ -65,6 +65,10 @@ $nav-break: $tablet_wide;
     @include center(none);
     z-index: 100;
   }
+  // Add a top margin to the nav for iphone4s
+  @media (max-device-height: 500px) {
+    margin-top: 30px;
+  }
   &.js-nav-active {
     z-index: 100;
     transition: none;
@@ -140,10 +144,14 @@ $nav-break: $tablet_wide;
   }
   @include breakpoint($normal) {
     padding: 0 25px;
+    transition: line-height .2s;
+    .js-scrolled & {
+      line-height: $header-height-small; 
+    }
   }
   // Adjust line height based on screen height
   @media (min-height: 500px) and (max-width: $nav-break) {
-    line-height: 60px;
+    line-height: 55px;
     font-size: 25px;
   }
   @media (min-height: 700px) and (max-width: $nav-break) {

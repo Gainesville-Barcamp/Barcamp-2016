@@ -10,5 +10,8 @@ $tablet_narrow: 650px;
 $smartphone_wide: 480px;
 $smartphone_narrow: 380px;
 
+// Minimum device height to start the fixed header
+$fixed-header-height: 600px;
+
 // Switch from mobile to desktop nav
 $nav-switch: $normal;

@@ -384,6 +384,9 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-family: futura, helvetica, arial, sans-serif; }
+  @media (min-device-height: 600px) {
+    body {
+      margin: 80px 0 0 0; } }
 
 a {
   transition: .2s color;
@@ -900,16 +903,25 @@ blockquote {
  */
 .header {
   background: white;
-  max-width: 100%;
-  overflow: hidden; }
+  max-width: 100%; }
   .header:before, .header:after {
     content: "";
     display: table; }
   .header:after {
     clear: both; }
+  @media (min-device-height: 600px) {
+    .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 200;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; } }
 
 .header-year {
   position: relative;
+  display: inline-block;
   float: left;
   width: 30%;
   text-align: center;
@@ -924,6 +936,11 @@ blockquote {
     .header-year {
       max-width: 250px;
       line-height: 80px; } }
+  @media (min-width: 1100px) {
+    .header-year {
+      transition: line-height .2s; }
+      .js-scrolled .header-year {
+        line-height: 50px; } }
   .header-year:before {
     content: "";
     position: absolute;
@@ -946,16 +963,34 @@ blockquote {
             backface-visibility: hidden; }
   .header-year .century,
   .header-year .year {
-    position: relative; }
+    position: relative;
+    display: inline-block;
+    transition: -webkit-transform .2s;
+    transition: transform .2s; }
+  @media (min-width: 1100px) {
+    .js-scrolled .header-year .century {
+      -webkit-transform: translatex(5px);
+          -ms-transform: translatex(5px);
+              transform: translatex(5px); } }
+  @media (min-width: 1100px) {
+    .js-scrolled .header-year .year {
+      -webkit-transform: translatex(-5px);
+          -ms-transform: translatex(-5px);
+              transform: translatex(-5px); } }
   .header-year .barcamp-logo {
     display: none; }
     @media (min-width: 480px) {
       .header-year .barcamp-logo {
-        -webkit-transform: translateY(16px);
-            -ms-transform: translateY(16px);
-                transform: translateY(16px);
+        position: relative;
         display: inline-block;
-        margin: 0 5px; } }
+        margin: 0 5px -16px 5px;
+        transition: -webkit-transform .2s;
+        transition: transform .2s; } }
+    @media (min-width: 1100px) {
+      .js-scrolled .header-year .barcamp-logo {
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8); } }
 
 /**
  * Hero
@@ -1222,6 +1257,9 @@ blockquote {
           -ms-transform: translate(0, 0);
               transform: translate(0, 0);
       z-index: 100; } }
+  @media (max-device-height: 500px) {
+    .menu {
+      margin-top: 30px; } }
   .menu.js-nav-active {
     z-index: 100;
     transition: none;
@@ -1304,10 +1342,13 @@ blockquote {
         color: white; } }
   @media (min-width: 1100px) {
     .menu-item-link {
-      padding: 0 25px; } }
+      padding: 0 25px;
+      transition: line-height .2s; }
+      .js-scrolled .menu-item-link {
+        line-height: 50px; } }
   @media (min-height: 500px) and (max-width: 900px) {
     .menu-item-link {
-      line-height: 60px;
+      line-height: 55px;
       font-size: 25px; } }
   @media (min-height: 700px) and (max-width: 900px) {
     .menu-item-link {

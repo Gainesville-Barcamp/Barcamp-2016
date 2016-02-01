@@ -3,15 +3,29 @@
  */
 
 $header-height: 80px;
+$header-height-small: 60px;
 
 .header {
   @include clearfix;
   background: white;
   max-width: 100%;
-  overflow: hidden; // Prevent horizontal scrolling
+  // Do not fix the header unless the device has a minimum height
+  @media (min-device-height: $fixed-header-height) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    backface-visibility: hidden; // Promote to its own layer
+  }
+
+  &.js-scrolled {
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.10);
+  }
 }
 .header-year {
   position: relative;
+  display: inline-block;
   float: left;
   width: 30%;
   text-align: center;
@@ -25,6 +39,12 @@ $header-height: 80px;
   @include breakpoint($smartphone_wide) {
     max-width: 250px;
     line-height: $header-height;
+  }
+  @include breakpoint($normal) {
+    transition: line-height .2s;
+    .js-scrolled & {
+      line-height: $header-height-small;
+    }
   }
   &:before {
     content: "";
@@ -44,13 +64,35 @@ $header-height: 80px;
   .century,
   .year {
     position: relative;
+    display: inline-block;
+    transition: transform .2s;
+  }
+  .century {
+    .js-scrolled & {
+      @include breakpoint($normal) {
+        transform: translatex(5px); // Move over to account for smaller barcamp logo
+      }
+    }
+  }
+  .year {
+    .js-scrolled & {
+      @include breakpoint($normal) {
+        transform: translatex(-5px); // Move over to account for smaller barcamp logo
+      }
+    }
   }
   .barcamp-logo {
     display: none;
     @include breakpoint($smartphone_wide) {
-      transform: translateY(16px);
+      position: relative;
       display: inline-block;
-      margin: 0 5px;
+      margin: 0 5px -16px 5px;
+      transition: transform .2s;
+    }
+    @include breakpoint($normal) {
+      .js-scrolled & {
+        transform: scale(0.8); // Make logo smaller in order to fit
+      }
     }
   }
 }

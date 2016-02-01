@@ -3,7 +3,7 @@
  */
 
 $header-height: 80px;
-$header-height-small: 50px;
+$header-height-small: 60px;
 
 .header {
   @include clearfix;
@@ -17,6 +17,10 @@ $header-height-small: 50px;
     width: 100%;
     z-index: 200;
     backface-visibility: hidden; // Promote to its own layer
+  }
+
+  &.js-scrolled {
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.10);
   }
 }
 .header-year {

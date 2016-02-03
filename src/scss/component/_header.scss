@@ -2,9 +2,6 @@
  * Header
  */
 
-$header-height: 80px;
-$header-height-small: 60px;
-
 .header {
   @include clearfix;
   background: white;
@@ -31,7 +28,7 @@ $header-height-small: 60px;
   text-align: center;
   margin: 0;
   padding: 0;
-  line-height: $header-height*0.75;
+  line-height: $header-height-small;
   font-family: $font-sans;
   font-style: italic;
   font-size: 24px;

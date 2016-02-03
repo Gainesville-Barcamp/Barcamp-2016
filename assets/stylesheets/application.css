@@ -386,6 +386,9 @@ body {
   font-family: futura, helvetica, arial, sans-serif; }
   @media (min-device-height: 600px) {
     body {
+      margin: 60px 0 0 0; } }
+  @media (min-device-height: 600px) and (min-width: 480px) {
+    body {
       margin: 80px 0 0 0; } }
 
 a {

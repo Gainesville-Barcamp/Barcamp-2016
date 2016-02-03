@@ -2,9 +2,9 @@
 .DS_Store
 
 # Ignore compiled assets
-assets/images/*
-assets/javascripts/*
-assets/stylesheets/*
+# assets/images/*
+# assets/javascripts/*
+# assets/stylesheets/*
 
 # Ignore output css
 css/*.map
@@ -26,10 +26,10 @@ scss/_*.scss
 
 tmp/
 tmp/*
-code.html
-contact.html
-faq.html
-index.html
-prospectus.html
-sessions.html
-sponsors.html
+# code.html
+# contact.html
+# faq.html
+# index.html
+# prospectus.html
+# sessions.html
+# sponsors.html

@@ -12,11 +12,11 @@
   background-position: center;
   background-size: cover;
   @include breakpoint($tablet_narrow) {
-    background-image: url(/images/footer-bg-mid.jpg);
+    background-image: url(../../assets/images/footer-bg-mid.jpg);
     padding-top: 75px; // Accomodate pseudo element
   }
   @include breakpoint($normal) {
-    background-image: url(/images/footer-bg-full.jpg);
+    background-image: url(../../assets/images/footer-bg-full.jpg);
   }
   @include breakpoint($wide) {
     padding-top: 125px; // Accomodate pseudo element
@@ -125,4 +125,3 @@
 .footer-button--faq {
   @include icon('icon-help.svg', 20px);
 }
-

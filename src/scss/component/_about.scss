@@ -11,7 +11,7 @@
     margin-top: 100px;
   }
   @include breakpoint($tablet_wide) {
-    background-image: url(/images/about-bg.jpg);
+    background-image: url(../../assets/images/about-bg.jpg);
     background-repeat: no-repeat;
     background-position : 100% 0;
     background-size: cover;

@@ -2,7 +2,7 @@
 ## To install
 1. Clone the repository
 2. Run `npm install`
-3. Run `grunt serve`. Your browser will open.
+3. Run `gulp`
 4. Start editing shit.
 
 ## How to contribute

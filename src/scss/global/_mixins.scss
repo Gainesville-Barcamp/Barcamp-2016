@@ -34,7 +34,7 @@
     top: 0;
     height: 20px;
     width: $width;
-    background-image: url(/images/#{$file});
+    background-image: url(../../assets/images/#{$file});
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -51,7 +51,7 @@
 // Centers an element with reference to the parent element that is not position: static
 //
 // Note that for this to work properly, you will need to absolutely position this element before applying this mixin
-// 
+//
 // Params
 //   $way: x (for horizontal centering), y (vertical centering), or xy (centered in both ways)
 //

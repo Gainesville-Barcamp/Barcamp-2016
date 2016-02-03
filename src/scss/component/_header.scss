@@ -2,9 +2,6 @@
  * Header
  */
 
-$header-height: 80px;
-$header-height-small: 60px;
-
 .header {
   @include clearfix;
   background: white;

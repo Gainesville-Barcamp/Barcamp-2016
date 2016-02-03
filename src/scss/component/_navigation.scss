@@ -133,7 +133,7 @@ $nav-break: $tablet_wide;
   }
   @include breakpoint($nav-break) {
     color: $gray;
-    line-height: $header-height; // $header-height defined in _header.scss
+    line-height: $header-height;
     display: inline-block;
     padding: 0 15px;
     &:hover,

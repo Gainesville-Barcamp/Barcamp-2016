@@ -24,7 +24,10 @@ body {
   font-smoothing: antialiased;
   font-family: $font-sans;
   @media (min-device-height: $fixed-header-height) {
-    margin: 80px 0 0 0; // Room for fixed header
+    margin: $header-height-small 0 0 0; // Room for fixed header
+  }
+  @media (min-device-height: $fixed-header-height) and (min-width: $smartphone_wide) {
+    margin: $header-height 0 0 0; // Room for fixed header
   }
 }
 a {

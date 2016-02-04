@@ -1230,6 +1230,7 @@ blockquote {
   margin: 0;
   padding: 0;
   z-index: -1;
+  pointer-events: none;
   -webkit-perspective: 500px;
           perspective: 500px;
   transition: z-index .2s;
@@ -1249,12 +1250,14 @@ blockquote {
       left: auto;
       -webkit-transform: translate(0, 0);
               transform: translate(0, 0);
-      z-index: 100; } }
+      z-index: 100;
+      pointer-events: auto; } }
   @media (max-device-height: 500px) {
     .menu {
       margin-top: 30px; } }
   .menu.js-nav-active {
     z-index: 100;
+    pointer-events: auto;
     transition: none;
     transition-delay: 0; }
 

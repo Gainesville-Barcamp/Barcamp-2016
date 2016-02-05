@@ -89,7 +89,7 @@ gulp.task('watch', function() {
   livereload.listen();
 
   // Watch .scss files
-  gulp.watch('./src/scss/*.scss', ['sass']);
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
 
   // Watch .js files
   gulp.watch('./src/javascripts/*.js', ['js']);

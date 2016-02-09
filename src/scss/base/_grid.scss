@@ -23,15 +23,10 @@
 
 .sponsors-grid {
   justify-content: center;
-  &--last {
-    .grid-cell:last-child { border-bottom: 0; }
-    @include breakpoint($tablet_wide) {
-      .grid-cell { border-bottom: 0!important; }
-    }
-  }
 
   .grid-cell {
     position: relative;
+    width: 100%;
     text-align: center;
     padding: 30px;
     border-bottom: 1px solid darken($off-white, 5%);
@@ -57,7 +52,6 @@
       max-width: 500px;
       height: auto;
       @include breakpoint($tablet_wide) {
-        max-width: 350px;
         margin: auto;
         position: absolute;
         top: 0;
@@ -67,6 +61,31 @@
       }
     }
 
+  }
+
+  &--magnolia {
+    .grid-cell img {
+      max-width: 400px;
+    }
+  }
+
+  &--sapling {
+    .grid-cell img {
+      max-width: 300px;
+    }
+  }
+
+  &--seedling {
+    .grid-cell img {
+      max-width: 200px;
+    }
+  }
+
+  &--last {
+    .grid-cell:last-child { border-bottom: 0; }
+    @include breakpoint($tablet_wide) {
+      .grid-cell { border-bottom: 0; }
+    }
   }
 
 }

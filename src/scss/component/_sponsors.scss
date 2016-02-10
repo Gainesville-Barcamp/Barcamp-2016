@@ -1,54 +1,88 @@
-/**
- * Sponsors section on front page
- */
-
-.sponsors { // @todo reduce padding when sponsor logos are added
-  padding: 50px 0;
-  @include breakpoint($normal) {
-    padding: 100px 0;
-  }
-}
-
-/**
- * Sponsors Page
- */
-
 .sponsors-button {
   @include icon('icon-heart.svg', 20px);
 }
-.sponsor-level {
-  text-align: center;
-}
-.sponsor-list {
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  div:not(.sponsors-front) & {
-    text-align: center;
+
+.sponsors-grid {
+  justify-content: center;
+  &--first {
+    margin-top: 50px;
   }
-}
-.sponsor-list-item {
-  display: inline-block;
-  vertical-align: middle;
-  width: 49%;
-  list-style: none;
-  padding: 20px;
-  margin: 20px 0;
-  @include breakpoint($normal) {
-    margin: 40px 0;
-  }
-  .sponsor-list--cypress & {
+
+  .grid-cell {
+    position: relative;
     width: 100%;
-    @include breakpoint($normal) {
-      width: 49%;
-      padding: 40px;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid darken($off-white, 5%);
+    @include breakpoint($tablet_wide) {
+      height: 220px;
+      border-right: 1px solid darken($off-white, 5%);
+      border-bottom: 1px solid darken($off-white, 5%);
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: -20px;
+         right: -20px;
+         height: 40px;
+         width: 40px;
+         z-index: 50;
+         background: $off-white;
+       }
+
+      &:last-child { border-right: 0; }
+    }
+
+    img {
+      width: 90%;
+      max-width: 500px;
+      height: auto;
+      @include breakpoint($tablet_wide) {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .banner {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      color: #666;
+      background: darken($off-white, 5%);
+      &:after {
+        display: none;
+      }
+    }
+
+  }
+
+  &--magnolia {
+    .grid-cell img {
+      max-width: 400px;
     }
   }
-  .sponsor-list--sapling & {
-    width: 49%;
-    @include breakpoint($normal) {
-      width: 24%;
-      padding: 40px;
+
+  &--sapling {
+    .grid-cell img {
+      max-width: 300px;
     }
   }
+
+  &--seedling {
+    .grid-cell img {
+      max-width: 200px;
+    }
+  }
+
+  &--last {
+    margin-bottom: 50px;
+    .grid-cell:last-child { border-bottom: 0; }
+    @include breakpoint($tablet_wide) {
+      .grid-cell { border-bottom: 0; }
+    }
+  }
+
 }

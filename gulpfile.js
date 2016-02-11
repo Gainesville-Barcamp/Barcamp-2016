@@ -9,6 +9,7 @@ var minifycss     = require('gulp-minify-css');
 var uglify        = require('gulp-uglify');
 var concat        = require('gulp-concat');
 var imagemin      = require('gulp-imagemin');
+var changed       = require('gulp-changed');
 var cache         = require('gulp-cache');
 var connect       = require('gulp-connect');
 var notify        = require('gulp-notify');
@@ -16,6 +17,11 @@ var rename        = require('gulp-rename');
 var fileinclude   = require('gulp-file-include');
 var del           = require('del');
 var plumber       = require('gulp-plumber');
+
+
+var onError = function(err) {
+  console.log(err);
+}
 
 gulp.task('webserver', function() {
   connect.server({
@@ -27,7 +33,7 @@ gulp.task('webserver', function() {
 
 gulp.task('fileinclude', function() {
   gulp.src('./src/views/*.tpl.html')
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: onError}))
     .pipe(fileinclude({ prefix: '@@'}))
     .pipe(rename({ extname: "" }))
     .pipe(rename({ extname: ".html" }))
@@ -40,7 +46,7 @@ gulp.task('fileinclude', function() {
 
 gulp.task('sass', function () {
   gulp.src('./src/scss/**/*.scss')
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: onError}))
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('./assets/stylesheets'))
@@ -55,7 +61,7 @@ gulp.task('sass', function () {
 
 gulp.task('js', function() {
   gulp.src('./src/javascripts/*.js')
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: onError}))
     .pipe(concat('application.js'))
     .pipe(gulp.dest('./assets/javascripts'))
     .pipe(rename({suffix: '.min'}))
@@ -68,10 +74,13 @@ gulp.task('js', function() {
 //Images
 
 gulp.task('images', function() {
-  gulp.src('./src/images/**/*')
-    .pipe(plumber())
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('./assets/images'))
+  var imgSrc = './src/images/**/*',
+      imgDst = './assets/images';
+  gulp.src(imgSrc)
+    .pipe(plumber({errorHandler: onError}))
+    .pipe(changed(imgDst))
+    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+    .pipe(gulp.dest(imgDst))
     .pipe(livereload())
     .pipe(notify({ message: 'Images task complete' }));
 });

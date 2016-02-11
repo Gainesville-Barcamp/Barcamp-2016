@@ -35,3 +35,90 @@
   width: 100%;
   height: auto;
 }
+
+.sessions-grid {
+
+  .grid-cell {
+    text-align: center;
+
+    .session {
+      position: relative;
+      display: inline-block;
+      max-width: 430px;
+      min-height: 300px;
+      background: #fff;
+      border: 1px solid darken($off-white, 3%);
+      overflow: hidden;
+      margin: 15px 0 15px 0;
+
+      &__speaker-image {
+        width: 100%;
+        height: auto;
+      }
+
+      &__title {
+        position: relative;
+        text-align: center;
+        display: block;
+        padding: 5px 10px 10px 10px;
+        font-size: 22px;
+        line-height: 1.25;
+        font-family: $font-sans;
+        border-bottom: 1px solid $off-white;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -25px;
+          height: 50px;
+          width: 100%;
+          display: block;
+          background: #fff;
+          z-index: -1;
+          @include skew(0deg, -5deg);
+        }
+
+
+      }
+
+      &__speaker-name {
+        display: block;
+        font-size: 20px;
+        font-family: $font-serif;
+        font-style: italic;
+        color: #bbb;
+      }
+
+      &__desc {
+        margin: 0;
+        padding: 10px 15px 15px 15px;
+        font-size: 18px;
+        line-height: 1.25;
+        font-family: $font-sans;
+        text-align: left;
+        color: #666;
+      }
+
+      &__banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        background: $red;
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        text-transform: uppercase;
+        &:after {
+          display: none;
+        }
+      }
+
+
+    }
+
+  }
+
+}

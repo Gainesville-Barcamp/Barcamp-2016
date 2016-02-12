@@ -2,7 +2,7 @@
  * Navigation
  */
 
-$nav-break: $tablet_wide;
+$nav-break: 1000px;
 
 .nav {
   float: right;
@@ -52,6 +52,7 @@ $nav-break: $tablet_wide;
   margin: 0;
   padding: 0;
   z-index: -1;
+  pointer-events: none;
   perspective: 500px;
   transition: z-index .2s;
   transition-delay: .4s;
@@ -64,6 +65,7 @@ $nav-break: $tablet_wide;
     max-width: none;
     @include center(none);
     z-index: 100;
+    pointer-events: auto;
   }
   // Add a top margin to the nav for iphone4s
   @media (max-device-height: 500px) {
@@ -71,6 +73,7 @@ $nav-break: $tablet_wide;
   }
   &.js-nav-active {
     z-index: 100;
+    pointer-events: auto;
     transition: none;
     transition-delay: 0;
   }

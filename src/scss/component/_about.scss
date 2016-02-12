@@ -15,10 +15,10 @@
     background-repeat: no-repeat;
     background-position : 100% 0;
     background-size: cover;
-    width: 95%;
+    width: 94%;
     overflow: hidden;
   }
-  @media (min-width: 1170px) {
+  @include breakpoint($normal) {
     background-size: contain;
   }
   .copy {
@@ -47,26 +47,26 @@
       border-style: solid;
       border-width: 25px 100vw 0 0;
       border-color: $red transparent transparent transparent;
-
       @include breakpoint($tablet_wide) { // CSS border arrows won't scale to dynamic content. Move to skewed box.
         top: 0;
-        right: -55px;
         left: auto;
-        height: 800px;
+        right: -55px;
         width: 500px;
-        transform: skewX(-5.5deg);
-        transform-origin: 100%;
-        border: 0;
-        background: $red;      
+        height: 800px; // Height will be hidden by overflow
+        background: $red;
+        transform: skewX(-7deg);
+        border: none;
       }
     }
     .copy-content {
       position: relative;
       z-index: 10;
-      overflow: hidden;
     }
     h1 {
       margin-top: 0;
+      @include breakpoint($tablet_wide) {
+        margin-right: -20px;
+      }
     }
     p {
       font-size: inherit;

@@ -3,8 +3,9 @@
  */
 
 .location {
-  padding: 50px 0; // @todo abstract margins
+  padding: 50px 0 0 0;
 }
+
 .location-banner {
   @include breakpoint($tablet_narrow) {
     float: left;

@@ -9,6 +9,7 @@ $container-max: 1700px;
   width: $container-width;
   max-width: $container-max;
   margin: 0 auto;
+  padding: 50px 0;
 }
 .container--small {
   max-width: 1170px;

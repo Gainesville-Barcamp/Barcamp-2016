@@ -35,18 +35,21 @@
   position: absolute;
   @include center;
   display: block;
-  width: 75%;
+  width: 100%;
   height: auto;
   margin: -10% auto 0 auto;
   max-width: 300px;
-  max-height: 60%;
+  max-height: 70%;
   @include breakpoint($tablet_narrow) {
-    margin-top: 0;
+    margin-top: -15px;
+    max-width: 370px;
+    max-height: 85%;
   }
   @include breakpoint($wide) {
     max-width: 400px;
   }
 }
+
 .hero-button {
   position: absolute;
   margin: 0;

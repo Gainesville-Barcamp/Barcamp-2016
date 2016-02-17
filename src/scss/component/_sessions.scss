@@ -37,36 +37,67 @@
 }
 
 .sessions-grid {
+  @include breakpoint($tablet_wide) {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+  	-ms-flex-pack: start;
+  	justify-content: flex-start;
+  }
 
   .grid-cell {
     text-align: center;
+    @include breakpoint($tablet_wide) {
+      text-align: left;
+    }
 
     .session {
       position: relative;
       display: inline-block;
-      max-width: 430px;
+      max-width: 450px;
+      min-width: 320px;
       min-height: 300px;
       background: #fff;
       border: 1px solid darken($off-white, 3%);
       overflow: hidden;
       margin: 15px 0 15px 0;
 
+      @include breakpoint($tablet_wide) {
+        max-width: 400px;
+      }
+
       &__speaker-image {
+        margin: 0 auto;
         width: 100%;
         height: 300px;
-        // background-position: center center;
-        @include background-size(contain);
 
         &.kent {
           background: #fff url('../../assets/images/speakers/kent-willis.png') no-repeat;
+          @include background-size(cover);
         }
 
         &.john {
           background: #fff url('../../assets/images/speakers/john-mcfetridge.png') no-repeat;
+          @include background-size(cover);
         }
 
         &.garret {
           background: #fff url('../../assets/images/speakers/garret-manno.png') no-repeat;
+          background-position: center -40px;
+          @include background-size(cover);
+          @include breakpoint($tablet_wide) {
+            background-position: center -20px;
+          }
+        }
+
+        &.pedro {
+          background: #fff url('../../assets/images/speakers/pedro-diaz.png') no-repeat;
+          @include background-size(cover);
+        }
+
+        &.james {
+          background: #fff url('../../assets/images/speakers/james-kies.png') no-repeat;
+          @include background-size(cover);
         }
 
       }

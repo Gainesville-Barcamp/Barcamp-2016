@@ -1086,14 +1086,16 @@ blockquote {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: block;
-  width: 75%;
+  width: 100%;
   height: auto;
   margin: -10% auto 0 auto;
   max-width: 300px;
-  max-height: 60%; }
+  max-height: 70%; }
   @media (min-width: 650px) {
     .hero-logo {
-      margin-top: 0; } }
+      margin-top: -15px;
+      max-width: 350px;
+      max-height: 80%; } }
   @media (min-width: 1600px) {
     .hero-logo {
       max-width: 400px; } }

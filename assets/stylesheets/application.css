@@ -1543,7 +1543,7 @@ blockquote {
       @media (min-width: 900px) {
         .sponsors-grid .grid-cell img {
           margin: auto;
-          width: 60%;
+          width: 75%;
           position: absolute;
           top: 0;
           left: 0;
@@ -1557,6 +1557,8 @@ blockquote {
       background: #e7e7e7; }
       .sponsors-grid .grid-cell .banner:after {
         display: none; }
+  .sponsors-grid--cypress .grid-cell img {
+    max-width: 500px; }
   .sponsors-grid--magnolia .grid-cell img {
     max-width: 400px; }
   .sponsors-grid--sapling .grid-cell img {

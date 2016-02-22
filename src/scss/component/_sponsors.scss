@@ -38,7 +38,7 @@
       height: auto;
       @include breakpoint($tablet_wide) {
         margin: auto;
-        width: 60%;
+        width: 75%;
         position: absolute;
         top: 0;
         left: 0;
@@ -58,6 +58,12 @@
       }
     }
 
+  }
+
+  &--cypress {
+    .grid-cell img {
+      max-width: 500px;
+    }
   }
 
   &--magnolia {

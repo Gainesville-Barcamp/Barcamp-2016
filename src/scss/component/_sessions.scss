@@ -37,6 +37,132 @@
 }
 
 .sessions-grid {
+  text-align: center;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.sessions-grid-sizer {width: 1%; }
+
+.session {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid darken($off-white, 3%);
+  display: block;
+  position: static;
+  width: 100%;
+  margin-top: 15px;
+
+  @include breakpoint($tablet_narrow) {
+    width: calc(50% - 10px);
+    margin: 10px 5px;
+  }
+
+  @include breakpoint($normal) {
+    width: calc(33% - 10px);
+  }
+
+  &__speaker-image {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+
+    &.kent {
+      background: #fff url('../../assets/images/speakers/kent-willis.png') no-repeat;
+      @include background-size(cover);
+    }
+
+    &.john {
+      background: #fff url('../../assets/images/speakers/john-mcfetridge.png') no-repeat;
+      @include background-size(cover);
+    }
+
+    &.garret {
+      background: #fff url('../../assets/images/speakers/garret-manno.png') no-repeat;
+      background-position: center -40px;
+      @include background-size(cover);
+      @include breakpoint($tablet_wide) {
+        background-position: center -20px;
+      }
+    }
+
+    &.pedro {
+      background: #fff url('../../assets/images/speakers/pedro-diaz.png') no-repeat;
+      @include background-size(cover);
+    }
+
+    &.james {
+      background: #fff url('../../assets/images/speakers/james-kies.png') no-repeat;
+      @include background-size(cover);
+    }
+
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 5px 10px 10px 10px;
+    font-size: 22px;
+    line-height: 1.25;
+    font-family: $font-sans;
+    border-bottom: 1px solid $off-white;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -25px;
+      height: 50px;
+      width: 100%;
+      display: block;
+      background: #fff;
+      z-index: -1;
+      @include skew(0deg, -5deg);
+    }
+  }
+
+  &__speaker-name {
+    display: block;
+    font-size: 20px;
+    font-family: $font-serif;
+    font-style: italic;
+    color: #bbb;
+  }
+
+  &__desc {
+    margin: 0;
+    padding: 10px 15px 15px 15px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-family: $font-sans;
+    text-align: left;
+    color: #666;
+  }
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: $red;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+
+/*
+.sessions-grid {
   @include breakpoint($tablet_wide) {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -161,10 +287,10 @@
           display: none;
         }
       }
-
-
     }
 
   }
 
 }
+
+*/

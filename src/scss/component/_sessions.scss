@@ -125,6 +125,12 @@
       @include background-size(cover);
     }
 
+    &.rylan {
+      background: #eee url('../../assets/images/speakers/rylan-conway.png') no-repeat;
+      background-position-y: -50px;
+      @include background-size(cover);
+    }
+
   }
 
   &__title {

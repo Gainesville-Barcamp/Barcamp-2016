@@ -1,9 +1,12 @@
+$gutter: 30px;
 
 .grid {
   display: flex;
   flex-direction: column;
   @include breakpoint($tablet_wide) {
     flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
   }
 
   &--justify-right { justify-content: flex-end; }
@@ -12,6 +15,13 @@
   &--align-top { align-items: flex-start; }
   &--align-bottom { align-items: flex-end; }
   &--align-center { align-items: center; }
+
+  &--gutters {
+    margin-left: -$gutter;
+    .grid-cell {
+      padding-left: $gutter;
+    }
+  }
 
   .grid-cell {
     flex: 1;

@@ -628,7 +628,13 @@ blockquote {
     .grid {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      -webkit-flex-flow: row;
+          -ms-flex-flow: row;
+              flex-flow: row;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
   .grid--justify-right {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -652,6 +658,10 @@ blockquote {
         -ms-flex-align: center;
                 -ms-grid-row-align: center;
             align-items: center; }
+  .grid--gutters {
+    margin-left: -30px; }
+    .grid--gutters .grid-cell {
+      padding-left: 30px; }
   .grid .grid-cell {
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -1258,7 +1268,7 @@ blockquote {
     .nav-menu-icon {
       right: 15px;
       top: 15px; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     .nav-menu-icon {
       display: none; } }
   .nav-menu-icon.js-nav-active {
@@ -1288,12 +1298,11 @@ blockquote {
   margin: 0;
   padding: 0;
   z-index: -1;
-  pointer-events: none;
   -webkit-perspective: 500px;
           perspective: 500px;
   transition: z-index .2s;
   transition-delay: .4s; }
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     .menu {
       -webkit-perspective: none;
               perspective: none;
@@ -1308,14 +1317,12 @@ blockquote {
       left: auto;
       -webkit-transform: translate(0, 0);
               transform: translate(0, 0);
-      z-index: 100;
-      pointer-events: auto; } }
+      z-index: 100; } }
   @media (max-device-height: 500px) {
     .menu {
       margin-top: 30px; } }
   .menu.js-nav-active {
     z-index: 100;
-    pointer-events: auto;
     transition: none;
     transition-delay: 0; }
 
@@ -1336,7 +1343,7 @@ blockquote {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition-timing-function: cubic-bezier(0.6, -0.47, 0.42, 1.4); }
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     .menu-item {
       float: left;
       margin: 0;
@@ -1366,7 +1373,7 @@ blockquote {
     .js-nav-active .menu-item:hover {
       -webkit-transform: rotatex(45deg);
               transform: rotatex(45deg); }
-      @media (min-width: 1000px) {
+      @media (min-width: 900px) {
         .js-nav-active .menu-item:hover {
           -webkit-transform: rotate(0);
                   transform: rotate(0); } }
@@ -1381,7 +1388,7 @@ blockquote {
   .menu-item-link:focus {
     background: white;
     color: #F62D4F; }
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     .menu-item-link {
       color: #353A47;
       line-height: 80px;
@@ -1396,11 +1403,11 @@ blockquote {
       transition: line-height .2s; }
       .js-scrolled .menu-item-link {
         line-height: 60px; } }
-  @media (min-height: 500px) and (max-width: 1000px) {
+  @media (min-height: 500px) and (max-width: 900px) {
     .menu-item-link {
       line-height: 55px;
       font-size: 25px; } }
-  @media (min-height: 700px) and (max-width: 1000px) {
+  @media (min-height: 700px) and (max-width: 900px) {
     .menu-item-link {
       line-height: 80px;
       font-size: 30px; } }
@@ -1422,7 +1429,7 @@ blockquote {
   .overlay.js-active {
     display: block;
     opacity: 0.8; }
-    @media (min-width: 1000px) {
+    @media (min-width: 900px) {
       .overlay.js-active {
         display: none; } }
 
@@ -1482,6 +1489,258 @@ blockquote {
   width: 100%;
   height: auto; }
 
+.sessions-grid {
+  text-align: center; }
+  .sessions-grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.sessions-grid-sizer {
+  width: 1%; }
+
+.session {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ececec;
+  display: block;
+  position: static;
+  width: 100%;
+  margin-top: 15px; }
+  @media (min-width: 650px) {
+    .session {
+      width: calc(50% - 10px);
+      margin: 10px 5px; } }
+  @media (min-width: 1100px) {
+    .session {
+      width: calc(33% - 10px); } }
+  .session__speaker-image {
+    position: relative;
+    width: 100%;
+    height: 300px; }
+    .session__speaker-image.kent {
+      background: #eee url("../../assets/images/speakers/kent-willis.jpg") no-repeat;
+      background-size: cover; }
+    .session__speaker-image.john {
+      background: #eee url("../../assets/images/speakers/john-mcfetridge.jpg") no-repeat;
+      background-position-y: -15px;
+      background-size: cover; }
+      @media (min-width: 1100px) {
+        .session__speaker-image.john {
+          background-position-y: 0px; } }
+    .session__speaker-image.garret {
+      background: #eee url("../../assets/images/speakers/garret-manno.jpg") no-repeat;
+      background-position-y: -25px;
+      background-size: cover; }
+    .session__speaker-image.pedro {
+      background: #eee url("../../assets/images/speakers/pedro-diaz.jpg") no-repeat;
+      background-position-y: -25px;
+      background-size: cover; }
+    .session__speaker-image.james {
+      background: #eee url("../../assets/images/speakers/james-kies.jpg") no-repeat;
+      background-size: cover; }
+    .session__speaker-image.iryna {
+      background: #eee url("../../assets/images/speakers/iryna-kanishcheva.jpg") no-repeat;
+      background-size: cover; }
+      @media (min-width: 380px) {
+        .session__speaker-image.iryna {
+          background-position-x: -50px; } }
+      @media (min-width: 480px) {
+        .session__speaker-image.iryna {
+          background-position-x: 0px; } }
+      @media (min-width: 1100px) {
+        .session__speaker-image.iryna {
+          background-position-x: -75px;
+          background-position-y: -10px; } }
+    .session__speaker-image.iman {
+      background: #eee url("../../assets/images/speakers/iman-zawahry.jpg") no-repeat;
+      background-size: cover; }
+    .session__speaker-image.rylan {
+      background: #eee url("../../assets/images/speakers/rylan-conway.jpg") no-repeat;
+      background-position-y: -50px;
+      background-size: cover; }
+  .session__title {
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 5px 10px 10px 10px;
+    font-size: 22px;
+    line-height: 1.25;
+    font-family: futura, helvetica, arial, sans-serif;
+    border-bottom: 1px solid #f4f4f4;
+    z-index: 1; }
+    .session__title:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -25px;
+      height: 50px;
+      width: 100%;
+      display: block;
+      background: #fff;
+      z-index: -1;
+      -webkit-transform: skew(0deg, -5deg);
+      transform: skew(0deg, -5deg); }
+  .session__speaker-name {
+    display: block;
+    font-size: 20px;
+    font-family: "pt_serifregular", serif;
+    font-style: italic;
+    color: #bbb; }
+  .session__desc {
+    margin: 0;
+    padding: 10px 15px 15px 15px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-family: futura, helvetica, arial, sans-serif;
+    text-align: left;
+    color: #666; }
+  .session__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: #F62D4F;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    text-transform: uppercase; }
+    .session__banner:after {
+      display: none; }
+
+/*
+.sessions-grid {
+  @include breakpoint($tablet_wide) {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+  	-ms-flex-pack: start;
+  	justify-content: flex-start;
+  }
+
+  .grid-cell {
+    text-align: center;
+    @include breakpoint($tablet_wide) {
+      text-align: left;
+    }
+
+    .session {
+      position: relative;
+      display: inline-block;
+      max-width: 450px;
+      min-width: 320px;
+      min-height: 300px;
+      background: #fff;
+      border: 1px solid darken($off-white, 3%);
+      overflow: hidden;
+      margin: 15px 0 15px 0;
+
+      @include breakpoint($tablet_wide) {
+        max-width: 400px;
+      }
+
+      &__speaker-image {
+        margin: 0 auto;
+        width: 100%;
+        height: 300px;
+
+        &.kent {
+          background: #fff url('../../assets/images/speakers/kent-willis.png') no-repeat;
+          @include background-size(cover);
+        }
+
+        &.john {
+          background: #fff url('../../assets/images/speakers/john-mcfetridge.png') no-repeat;
+          @include background-size(cover);
+        }
+
+        &.garret {
+          background: #fff url('../../assets/images/speakers/garret-manno.png') no-repeat;
+          background-position: center -40px;
+          @include background-size(cover);
+          @include breakpoint($tablet_wide) {
+            background-position: center -20px;
+          }
+        }
+
+        &.pedro {
+          background: #fff url('../../assets/images/speakers/pedro-diaz.png') no-repeat;
+          @include background-size(cover);
+        }
+
+        &.james {
+          background: #fff url('../../assets/images/speakers/james-kies.png') no-repeat;
+          @include background-size(cover);
+        }
+
+      }
+
+      &__title {
+        position: relative;
+        text-align: center;
+        display: block;
+        padding: 5px 10px 10px 10px;
+        font-size: 22px;
+        line-height: 1.25;
+        font-family: $font-sans;
+        border-bottom: 1px solid $off-white;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -25px;
+          height: 50px;
+          width: 100%;
+          display: block;
+          background: #fff;
+          z-index: -1;
+          @include skew(0deg, -5deg);
+        }
+
+
+      }
+
+      &__speaker-name {
+        display: block;
+        font-size: 20px;
+        font-family: $font-serif;
+        font-style: italic;
+        color: #bbb;
+      }
+
+      &__desc {
+        margin: 0;
+        padding: 10px 15px 15px 15px;
+        font-size: 18px;
+        line-height: 1.25;
+        font-family: $font-sans;
+        text-align: left;
+        color: #666;
+      }
+
+      &__banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        background: $red;
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        text-transform: uppercase;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+*/
 .sponsors-button {
   position: relative;
   padding-left: 45px; }

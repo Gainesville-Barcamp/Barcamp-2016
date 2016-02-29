@@ -71,12 +71,12 @@
     height: 300px;
 
     &.kent {
-      background: #eee url('../../assets/images/speakers/kent-willis.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/kent-willis.jpg') no-repeat;
       @include background-size(cover);
     }
 
     &.john {
-      background: #eee url('../../assets/images/speakers/john-mcfetridge.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/john-mcfetridge.jpg') no-repeat;
       background-position-y: -15px;
       @include background-size(cover);
       @include breakpoint($normal) {
@@ -85,24 +85,24 @@
     }
 
     &.garret {
-      background: #eee url('../../assets/images/speakers/garret-manno.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/garret-manno.jpg') no-repeat;
       background-position-y: -25px;
       @include background-size(cover);
     }
 
     &.pedro {
-      background: #eee url('../../assets/images/speakers/pedro-diaz.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/pedro-diaz.jpg') no-repeat;
       background-position-y: -25px;
       @include background-size(cover);
     }
 
     &.james {
-      background: #eee url('../../assets/images/speakers/james-kies.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/james-kies.jpg') no-repeat;
       @include background-size(cover);
     }
 
     &.iryna {
-      background: #eee url('../../assets/images/speakers/iryna-kanishcheva.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/iryna-kanishcheva.jpg') no-repeat;
       @include background-size(cover);
 
       @include breakpoint($smartphone_narrow) {
@@ -121,12 +121,12 @@
     }
 
     &.iman {
-      background: #eee url('../../assets/images/speakers/iman-zawahry.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/iman-zawahry.jpg') no-repeat;
       @include background-size(cover);
     }
 
     &.rylan {
-      background: #eee url('../../assets/images/speakers/rylan-conway.png') no-repeat;
+      background: #eee url('../../assets/images/speakers/rylan-conway.jpg') no-repeat;
       background-position-y: -50px;
       @include background-size(cover);
     }

@@ -131,6 +131,12 @@
       @include background-size(cover);
     }
 
+    &.david {
+      background: #eee url('../../assets/images/speakers/david-nessl.jpg') no-repeat;
+      background-position-y: -100px;
+      @include background-size(cover);
+    }
+
   }
 
   &__title {

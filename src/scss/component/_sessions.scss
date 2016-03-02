@@ -137,6 +137,12 @@
       @include background-size(cover);
     }
 
+    &.eva {
+      background: #eee url('../../assets/images/speakers/eva-del-rio.jpg') no-repeat;
+      background-position-y: -30px;
+      @include background-size(cover);
+    }
+
   }
 
   &__title {

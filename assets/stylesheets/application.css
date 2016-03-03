@@ -1559,6 +1559,14 @@ blockquote {
       background: #eee url("../../assets/images/speakers/rylan-conway.jpg") no-repeat;
       background-position-y: -50px;
       background-size: cover; }
+    .session__speaker-image.david {
+      background: #eee url("../../assets/images/speakers/david-nessl.jpg") no-repeat;
+      background-position-y: -100px;
+      background-size: cover; }
+    .session__speaker-image.eva {
+      background: #eee url("../../assets/images/speakers/eva-del-rio.jpg") no-repeat;
+      background-position-y: -30px;
+      background-size: cover; }
   .session__title {
     position: relative;
     text-align: center;

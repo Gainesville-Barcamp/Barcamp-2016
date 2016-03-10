@@ -1567,6 +1567,9 @@ blockquote {
       background: #eee url("../../assets/images/speakers/eva-del-rio.jpg") no-repeat;
       background-position-y: -30px;
       background-size: cover; }
+    .session__speaker-image.group {
+      background: #eee url("../../assets/images/speakers/group.jpg") no-repeat;
+      background-size: cover; }
   .session__title {
     position: relative;
     text-align: center;

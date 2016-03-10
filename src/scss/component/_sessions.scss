@@ -143,6 +143,12 @@
       @include background-size(cover);
     }
 
+    &.group {
+      background: #eee url('../../assets/images/speakers/group.jpg') no-repeat;
+      // background-position-y: -30px;
+      @include background-size(cover);
+    }
+
   }
 
   &__title {
